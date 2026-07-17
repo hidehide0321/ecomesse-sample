@@ -10,6 +10,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    main > .section:nth-of-type(even) {
+      width: calc(100% - 32px);
+      margin: 40px auto;
+      background-color: var(--sky) !important;
+      border-radius: var(--radius-lg);
+    }
+  </style>
 </head>
 <body>
 
@@ -47,7 +55,7 @@
     <!-- ── ページ冒頭ファーストビュー ── -->
     <section class="hero">
       <div class="hero-copy">
-        <h1>遊びながら、<br>未来を選ぶ。<br><span>親子で感じるサステナビリティ</span></h1>
+        <h1>遊びながら、<br>未来をはぐくむ。<br><span>親子で感じるサステナビリティ</span></h1>
         <p style="color:var(--primary); font-weight:800; font-size:18px; line-height:1.8; margin:18px 0 0;">100年後に向けた循環型社会と住みよい環境を目指す！</p>
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin:22px 0; max-width:620px;">
           <div style="background:#fff; border:2px solid rgba(24,111,72,0.16); border-radius:var(--radius-md); padding:16px 18px; box-shadow:var(--shadow-soft);">
