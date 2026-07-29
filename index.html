@@ -17,6 +17,35 @@
       background-color: var(--sky) !important;
       border-radius: var(--radius-lg);
     }
+
+    .footer-contact {
+      width: 100%;
+      max-width: 920px;
+      padding: 24px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      text-align: center;
+    }
+
+    .footer-contact p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .footer-contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 8px 20px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .footer-contact a {
+      color: #fff;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -30,7 +59,7 @@
       </a>
       <nav class="desktop-nav">
         <a href="#view">見どころ</a>
-        <a href="#programs">体験プログラム</a>
+        <a href="#view">体験プログラム</a>
         <a href="online/">オンライン企画</a>
         <a href="#info">来場案内</a>
         <a href="#faq">よくある質問</a>
@@ -43,7 +72,7 @@
     <!-- Mobile Navigation -->
     <nav class="mobile-menu">
       <a href="#view">見どころ</a>
-      <a href="#programs">体験プログラム</a>
+      <a href="#view">体験プログラム</a>
       <a href="online/">オンライン企画</a>
       <a href="#info">来場案内</a>
       <a href="#faq">よくある質問</a>
@@ -55,7 +84,7 @@
     <!-- ── ページ冒頭ファーストビュー ── -->
     <section class="hero">
       <div class="hero-copy">
-        <h1>遊びながら、<br>未来をはぐくむ。<br><span>親子で感じるサステナビリティ</span></h1>
+        <h1>遊びながら、<br>未来をはぐくむ。<br><span>子どもから大人まで楽しめるサステナビリティ</span></h1>
         <p style="color:var(--primary); font-weight:800; font-size:18px; line-height:1.8; margin:18px 0 0;">100年後に向けた循環型社会と住みよい環境を目指す！</p>
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin:22px 0; max-width:620px;">
           <div style="background:#fff; border:2px solid rgba(24,111,72,0.16); border-radius:var(--radius-md); padding:16px 18px; box-shadow:var(--shadow-soft);">
@@ -64,14 +93,14 @@
           </div>
           <div style="background:#fff; border:2px solid rgba(24,111,72,0.16); border-radius:var(--radius-md); padding:16px 18px; box-shadow:var(--shadow-soft);">
             <p style="margin:0 0 4px; color:var(--primary); font-weight:800; font-size:14px;">幕張メッセ開催</p>
-            <p style="margin:0; color:var(--text-main); font-weight:800; font-size:18px;">10月11日(日) 10:00~○○時</p>
+            <p style="margin:0; color:var(--text-main); font-weight:800; font-size:18px;">10月11日(日) 10:00～16:00</p>
           </div>
         </div>
         <p class="hero-lead">
           環境だけでなく、食、健康、地域、つながりまで。子どもたちの「やってみたい」から、これからの心地よい暮らしを親子で見つける一日です。
         </p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#programs">体験を見る</a>
+          <a class="btn btn-primary" href="#view">体験を見る</a>
           <a class="btn btn-secondary" href="#info">来場情報を確認</a>
         </div>
         <div style="display:flex; align-items:center; gap:12px; margin-top:18px; flex-wrap:wrap;">
@@ -99,7 +128,7 @@
     <!-- ── 1. 今年の見どころ ── -->
     <section class="section reveal" id="view">
       <div class="section-head">
-        <h2>未来につながる体験テーマ</h2>
+        <h2>サステナブル体験プログラム</h2>
         <p>サステナブルな暮らしを、親子で楽しく体験できる4つの入口。</p>
       </div>
       
@@ -136,7 +165,7 @@
             <img src="images/family_category_food_2026.png" alt="会場でサステナブルフードを楽しむ様子">
           </div>
           <div class="choice-body" style="padding:24px;">
-            <h3 style="font-size:20px;">食べる</h3>
+            <h3 style="font-size:20px;">ふれあう</h3>
             <p style="font-size:14px; margin-bottom:0;">地域の食やからだにやさしい選択から、ウェルビーイングを味わいます。</p>
           </div>
         </div>
@@ -149,67 +178,21 @@
           </div>
           <div class="choice-body" style="padding:24px;">
             <h3 style="font-size:20px;">見つける</h3>
-            <p style="font-size:14px; margin-bottom:0;">会場に散りばめられた問いから、未来の暮らしのヒントを見つけましょう。</p>
+            <p style="font-size:14px; margin-bottom:0;">会場のブースから、未来の暮らしのヒントを見つけましょう。</p>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- ── 2〜5. 体験プログラム・ワークショップ・ステージ・マルシェ ── -->
-    <section class="section reveal" id="programs" style="background-color: var(--primary-bg); border-radius: var(--radius-lg); margin:40px auto; max-width:1200px;">
-      <div class="section-head">
-        <h2>サステナブル体験プログラム</h2>
-        <p>学び、遊び、食、ステージを通じて、心地よい未来を体感できます。</p>
-      </div>
-
-      <div class="feature-grid">
-        <div class="feature-card">
-          <img src="images/program_workshop_2026.png" alt="廃材工作ワークショップを楽しむ子どもたち" style="width:100%; height:180px; object-fit:cover; border-radius: var(--radius-md); margin-bottom:24px;">
-          <h3>ワークショップ：リユース・クリエイター</h3>
-          <p>使い終えた素材が、子どもたちの発想で新しい作品に生まれ変わります。</p>
-        </div>
-        <div class="feature-card">
-          <img src="images/program_stage_2026.png" alt="未来の暮らしをテーマにしたステージ" style="width:100%; height:180px; object-fit:cover; border-radius: var(--radius-md); margin-bottom:24px;">
-          <h3>ステージ：未来の暮らしショー</h3>
-          <p>音楽やクイズを交えながら、サステナブルで心地よい暮らしを親子で楽しく学べます。</p>
-        </div>
-        <div class="feature-card">
-          <img src="images/program_marche_2026.png" alt="SDGsマルシェで地元野菜を選ぶ家族" style="width:100%; height:180px; object-fit:cover; border-radius: var(--radius-md); margin-bottom:24px;">
-          <h3>サステナブルマルシェ</h3>
-          <p>地元野菜や体にやさしい食、使い捨てを減らす工夫など、毎日の暮らしに取り入れやすい選択肢が集まります。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── オンライン企画入口 ── -->
-    <section class="section reveal">
-      <div class="section-head">
-        <h2>オンラインでも楽しめます</h2>
-        <p>会場に来られない方も、エコメッセちばに参加する団体の活動や思いをオンラインで知ることができます。</p>
-      </div>
-      <div class="feature-grid" style="grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));">
-        <div class="feature-card">
-          <h3>オンライン出展</h3>
-          <p>参加団体の活動や取り組みを、動画やスライドで紹介します。</p>
-          <a class="btn btn-secondary" href="online/#online-exhibition" style="margin-top:24px;">詳しく見る</a>
-        </div>
-        <div class="feature-card">
-          <h3>団体インタビュー</h3>
-          <p>地域や環境のために活動する団体の思いや取り組みを、インタビュー形式で紹介します。</p>
-          <a class="btn btn-secondary" href="online/#interview" style="margin-top:24px;">詳しく見る</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 6. 親子向けスタンプラリー ── -->
+    <!-- ── 6. 親子向けサステナブルビンゴ ── -->
     <section class="section reveal" style="text-align:center;">
       <div class="section-head">
-        <h2>親子サステナブルラリー</h2>
+        <h2>親子サステナブルビンゴ</h2>
         <p>会場内のチェックポイントをめぐって、環境・食・健康・地域のヒントを集めよう！全部集めると記念品をプレゼント。</p>
       </div>
       <!-- Unsplash: 親子が笑顔で指差している写真 -->
-      <img src="images/family_stamp_rally_2026.png" alt="親子でサステナブルラリーを楽しむ様子" style="max-width:600px; width:100%; border-radius: var(--radius-md); box-shadow: var(--shadow-medium); margin-top:20px;">
+      <img src="images/family_stamp_rally_2026.png" alt="親子でサステナブルビンゴを楽しむ様子" style="max-width:600px; width:100%; border-radius: var(--radius-md); box-shadow: var(--shadow-medium); margin-top:20px;">
     </section>
 
     <!-- ── 7. 出展ブース一覧 ── -->
@@ -226,7 +209,7 @@
     <!-- ── 8. オンライン出展一覧 ── -->
     <section class="section reveal">
       <div class="section-head">
-        <h2>オンライン出展一覧</h2>
+        <h2>オンラインで学ぶ</h2>
         <p>会場に来られない方も、動画や資料でサステナブルな取り組みに触れられます。</p>
       </div>
       <div class="info-strip" style="background:#fff; border: 1px solid rgba(0,0,0,0.05);">
@@ -247,8 +230,8 @@
       </div>
       <div class="news-list" style="margin-top:24px;">
         <div class="news-item" style="pointer-events:none;">
-          <time>10月11日(日)<br>10:00~○○時</time>
-          <span><b>幕張メッセ 国際会議場で開催</b><br>親子向け体験プログラム、ステージ、マルシェ、ラリーを実施します。</span>
+          <time>10月11日(日)<br>10:00～16:00</time>
+          <span><b>幕張メッセ 国際会議場で開催</b><br>親子向け体験プログラム、ステージ、マルシェ、サステナブルビンゴを実施します。</span>
         </div>
         <div class="news-item" style="pointer-events:none;">
           <time>11:00~</time>
@@ -260,7 +243,7 @@
         </div>
         <div class="news-item" style="pointer-events:none;">
           <time>16:00</time>
-          <span>閉場・スタンプラリー景品引き換え終了</span>
+          <span>閉場・サステナブルビンゴ景品引き換え終了</span>
         </div>
       </div>
     </section>
@@ -385,14 +368,20 @@
         </a>
         <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X" style="width:44px; height:44px; border-radius:50%; border:1px solid rgba(24,111,72,0.18); display:inline-flex; align-items:center; justify-content:center; color:var(--primary); background:#fff; font-weight:800; font-size:20px;">X</a>
       </div>
+      <div class="footer-contact">
+        <p><strong>主催：</strong>エコメッセちば実行委員会</p>
+        <p><strong>事務局：</strong>〒260-0024 千葉市中央区中央港1-11-1（一財）千葉県環境財団 業務部 環境活動支援課気付</p>
+        <div class="footer-contact-links">
+          <a href="tel:08053740019">TEL 080-5374-0019</a>
+          <span>FAX 043-247-4152</span>
+          <a href="mailto:info@ecomesse.com">info@ecomesse.com</a>
+        </div>
+      </div>
       <div class="footer-bottom">
         <p>&copy; 2026 Eco Messe Chiba All Rights Reserved.</p>
       </div>
     </div>
   </footer>
-
-  <!-- ===== Back to Top ===== -->
-  <button class="back-to-top" aria-label="トップへ戻る">↑</button>
 
   <script src="script.js"></script>
 </body>
