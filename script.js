@@ -36,18 +36,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ── Scroll Reveal Animations ──
   const revealElements = document.querySelectorAll(".reveal");
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("reveal-active");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
 
-  revealElements.forEach((el) => {
-    revealObserver.observe(el);
-  });
+  if (!("IntersectionObserver" in window)) {
+    // 非対応ブラウザではアニメーションを諦めて全て表示する
+    revealElements.forEach((el) => el.classList.add("reveal-active"));
+  } else {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-active");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealElements.forEach((el) => {
+      revealObserver.observe(el);
+    });
+  }
 
   // ── FAQ Accordion Toggle ──
   const faqQuestions = document.querySelectorAll(".faq-question");

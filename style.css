@@ -738,6 +738,13 @@ footer {
   transform: translateY(0);
 }
 
+/* JS が無効・読み込み失敗時のフォールバック（コンテンツが見えなくなるのを防ぐ） */
+.no-js .reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
 /* Stats Section Styles */
 .stats-container {
   display: grid;
