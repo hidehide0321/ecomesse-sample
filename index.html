@@ -1,406 +1,568 @@
 <!doctype html>
-<html lang="ja" class="no-js">
+<html lang="ja">
 <head>
-  <script>document.documentElement.classList.remove("no-js");</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>親子で体験するサステナブルな未来｜エコメッセちば2026</title>
-  <meta name="description" content="サステナビリティ、ウェルビーイング、地域のつながりを親子で体験。ワークショップ、マルシェ、ステージ、ラリーなどを通じて未来の暮らしを楽しく学べます。">
+  <meta name="description" content="10月11日(日)幕張メッセ国際会議場。入場無料・予約不要・雨天決行。つくる／遊ぶ／ふれあう／見つけるの4つの体験で、親子でサステナブルな暮らしのヒントに出会えます。">
+
+  <!-- ===== OGP（FacebookなどのSNSでシェアされたときの見え方） =====
+       ※ og:url と og:image は「公開先の絶対URL」が必要です。
+          公開URLが決まったら、この2つを差し替えてください。 -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="エコメッセちば2026">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="親子で体験するサステナブルな未来｜エコメッセちば2026">
+  <meta property="og:description" content="10月11日(日)幕張メッセ国際会議場。入場無料・予約不要・雨でも開催。つくる／遊ぶ／ふれあう／見つけるの4つの体験で、親子でサステナブルな暮らしのヒントに出会えます。">
+  <meta property="og:url" content="https://hidehide0321.github.io/ecomesse-sample/">
+  <meta property="og:image" content="https://hidehide0321.github.io/ecomesse-sample/images/ogp_x_card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="エコメッセちば2026 遊びながら、未来をはぐくむ。10月11日(日)幕張メッセ国際会議場 入場無料">
+
+  <!-- ===== X（旧Twitter）カード ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ecomessechiba">
+  <meta name="twitter:title" content="親子で体験するサステナブルな未来｜エコメッセちば2026">
+  <meta name="twitter:description" content="10月11日(日)幕張メッセ国際会議場。入場無料・予約不要・雨でも開催。親子で楽しむ4つの体験。">
+  <meta name="twitter:image" content="https://hidehide0321.github.io/ecomesse-sample/images/ogp_x_card.png">
+  <meta name="twitter:image:alt" content="エコメッセちば2026 遊びながら、未来をはぐくむ。10月11日(日)幕張メッセ国際会議場 入場無料">
+
+  <!-- ===== ファビコン（ロゴから生成） ===== -->
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+  <meta name="theme-color" content="#1f6b45">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    main > .section:nth-of-type(even) {
-      width: calc(100% - 32px);
-      margin: 40px auto;
-      background-color: var(--sky) !important;
-      border-radius: var(--radius-lg);
-    }
-
-    .footer-contact {
-      width: 100%;
-      max-width: 920px;
-      padding: 24px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.18);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-      text-align: center;
-    }
-
-    .footer-contact p {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.86);
-      font-size: 14px;
-      line-height: 1.9;
-    }
-
-    .footer-contact-links {
-      display: flex;
-      justify-content: center;
-      gap: 8px 20px;
-      flex-wrap: wrap;
-      margin-top: 8px;
-    }
-
-    .footer-contact a {
-      color: #fff;
-      text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" href="kuro.css">
 </head>
 <body>
 
-  <!-- ===== Header ===== -->
+  <!-- ===== ヘッダー ===== -->
   <header class="site-header">
-    <div class="header-inner">
-      <a class="logo" href="#main">
-        <span class="logo-mark">e</span>
-        <span><b>エコメッセちば</b><small>2026</small></span>
+    <div class="wrap header-inner">
+      <a class="logo" href="#top">
+        <img class="logo-img" src="images/ecomesse_logo_mark.png" alt="">
+        <span class="logo-name">エコメッセちば</span>
+        <em class="logo-year">2026</em>
       </a>
-      <nav class="desktop-nav">
-        <a href="#view">体験プログラム</a>
-        <a href="online/">オンライン企画</a>
-        <a href="#info">来場案内</a>
+      <nav class="nav">
+        <a href="#experience">体験プログラム</a>
+        <a href="#bingo">ビンゴ</a>
+        <a href="#schedule">1日の流れ</a>
+        <a href="#online">オンライン</a>
+        <a href="#access">アクセス</a>
         <a href="#faq">よくある質問</a>
       </nav>
-      <div class="header-actions">
-        <a class="btn btn-primary" href="mailto:info@ecomesse.com">お問い合せ</a>
-      </div>
-      <button class="menu-btn" aria-label="メニューを開く">☰</button>
+      <a class="btn btn-main header-cta" href="#contact">お問い合わせ</a>
+
+      <!-- モバイルメニュー：JSを使わず details で開閉 -->
+      <details class="menu-drawer">
+        <summary aria-label="メニューを開く"></summary>
+        <div class="menu-panel">
+          <a href="#experience">体験プログラム</a>
+          <a href="#bingo">ビンゴ</a>
+          <a href="#schedule">1日の流れ</a>
+          <a href="#online">オンライン</a>
+          <a href="#access">アクセス</a>
+          <a href="#faq">よくある質問</a>
+          <a href="#contact">お問い合わせ</a>
+        </div>
+      </details>
     </div>
-    <!-- Mobile Navigation -->
-    <nav class="mobile-menu">
-      <a href="#view">体験プログラム</a>
-      <a href="online/">オンライン企画</a>
-      <a href="#info">来場案内</a>
-      <a href="#faq">よくある質問</a>
-    </nav>
   </header>
 
-  <main id="main">
+  <main id="top">
 
-    <!-- ── ページ冒頭ファーストビュー ── -->
+    <!-- ===== ヒーロー ===== -->
     <section class="hero">
-      <div class="hero-copy">
-        <h1>遊びながら、<br>未来をはぐくむ。<br><span>子どもから大人まで楽しめるサステナビリティ</span></h1>
-        <p style="color:var(--primary); font-weight:800; font-size:18px; line-height:1.8; margin:18px 0 0;">100年後に向けた持続可能な社会と住みよい環境を目指す！</p>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin:22px 0; max-width:620px;">
-          <div style="background:#fff; border:2px solid rgba(24,111,72,0.16); border-radius:var(--radius-md); padding:16px 18px; box-shadow:var(--shadow-soft);">
-            <p style="margin:0 0 4px; color:var(--primary); font-weight:800; font-size:14px;">オンラインで学ぶ</p>
-            <p style="margin:0; color:var(--text-main); font-weight:800; font-size:18px;">10月10日(土) 10:00~</p>
+      <div class="wrap hero-grid">
+        <div>
+          <h1>
+            遊びながら、<br>未来をはぐくむ。
+            <span class="sub">子どもから大人まで楽しめるサステナビリティ</span>
+          </h1>
+          <p class="hero-mission">100年後に向けた持続可能な社会と住みよい環境を目指す！</p>
+          <p class="hero-lead">
+            環境だけでなく、食、健康、地域、つながりまで。子どもたちの「やってみたい」から、
+            これからの心地よい暮らしを親子で見つける一日です。
+          </p>
+
+          <div class="date-cards">
+            <div class="date-card">
+              <p class="label">💻 オンラインで学ぶ</p>
+              <p class="day">10月10日(土) 10:00〜</p>
+              <p class="place">おうちから参加できます</p>
+            </div>
+            <div class="date-card">
+              <p class="label">🎪 会場で楽しむ</p>
+              <p class="day">10月11日(日) 10:00〜16:00</p>
+              <p class="place">幕張メッセ 国際会議場</p>
+            </div>
           </div>
-          <div style="background:#fff; border:2px solid rgba(24,111,72,0.16); border-radius:var(--radius-md); padding:16px 18px; box-shadow:var(--shadow-soft);">
-            <p style="margin:0 0 4px; color:var(--primary); font-weight:800; font-size:14px;">幕張メッセ開催</p>
-            <p style="margin:0; color:var(--text-main); font-weight:800; font-size:18px;">10月11日(日) 10:00～16:00</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-main" href="#experience">どんな体験ができる？</a>
+            <a class="btn btn-sub" href="#access">会場へのアクセス</a>
+          </div>
+
+          <p class="hero-ask">
+            行こうか迷っている方へ。<a href="#contact">気になることを聞いてみる</a>
+          </p>
+
+          <div class="hero-sns">
+            <span class="label">最新情報はこちら</span>
+            <a class="sns-btn" href="https://www.instagram.com/ecomessechiba_official" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+            </a>
+            <a class="sns-btn" href="https://x.com/ecomessechiba" target="_blank" rel="noopener" aria-label="X">X</a>
           </div>
         </div>
-        <p class="hero-lead">
-          環境だけでなく、食、健康、地域、つながりまで。子どもたちの「やってみたい」から、これからの心地よい暮らしを親子で見つける一日です。
+
+        <div class="hero-art">
+          <img src="images/01_eco_festival_main.png" alt="幕張メッセの会場で、親子がブースをめぐって楽しむ様子">
+          <p class="hero-badge">入場無料・予約不要</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 安心バッジ帯 ===== -->
+    <section class="assure">
+      <div class="wrap assure-grid">
+        <div class="assure-item">
+          <span class="assure-icon" aria-hidden="true">🎟️</span>
+          <span><b>入場無料</b><span>参加費はかかりません</span></span>
+        </div>
+        <div class="assure-item">
+          <span class="assure-icon" aria-hidden="true">📝</span>
+          <span><b>予約不要</b><span>一部ワークショップを除く</span></span>
+        </div>
+        <div class="assure-item">
+          <span class="assure-icon" aria-hidden="true">☔</span>
+          <span><b>雨でも開催</b><span>屋内の国際会議場です</span></span>
+        </div>
+        <div class="assure-item">
+          <span class="assure-icon" aria-hidden="true">🍼</span>
+          <span><b>ベビーカーOK</b><span>授乳室・おむつ交換台あり</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 実績 ===== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">SINCE 1996</span>
+          <h2>30年つづく、千葉の環境イベント</h2>
+          <p>市民・企業・大学・自治体が立場を越えて集まる場として、地域の中で育ってきました。</p>
+        </div>
+        <!-- ※公開前に正式な最新数値へ差し替え -->
+        <div class="stats">
+          <div class="stat">
+            <strong>31<span>回目</span></strong>
+            <p>地域の環境啓発イベントとしての歴史</p>
+          </div>
+          <div class="stat">
+            <strong>7,500<span>人</span></strong>
+            <p>前回来場実績（千葉近郊のファミリー層中心）</p>
+          </div>
+          <div class="stat">
+            <strong>100<span>団体</span></strong>
+            <p>産官学民の多様な出展共創規模</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4つの体験 ===== -->
+    <section class="section section-soft" id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">EXPERIENCE</span>
+          <h2>4つの入口から、はじめよう</h2>
+          <p>むずかしい話はぬきに。手を動かして、つくって、遊んで。<br>子どもの「やってみたい」から入れる4つの体験です。</p>
+        </div>
+
+        <div class="exp-grid">
+          <article class="exp-card">
+            <img src="images/02_recycle_craft_family.png" alt="親子で牛乳パックや空き容器を使って工作を楽しむ様子">
+            <div class="exp-body">
+              <h3>つくる <em>MAKE</em></h3>
+              <p>牛乳パックや落ち葉など、身近な素材から。ものを大切にする感覚と創造力が育ちます。</p>
+            </div>
+          </article>
+
+          <article class="exp-card">
+            <img src="images/03_family_recycling_learning.png" alt="親子でリサイクルについてゲームで学ぶ様子">
+            <div class="exp-body">
+              <h3>遊ぶ <em>PLAY</em></h3>
+              <p>ゲームやクイズで、身の回りのサステナブルを発見。遊んでいるうちに自然と身につきます。</p>
+            </div>
+          </article>
+
+          <article class="exp-card">
+            <img src="images/04_farmers_market.png" alt="地域の野菜が並ぶファーマーズマーケットの様子">
+            <div class="exp-body">
+              <h3>ふれあう <em>TASTE</em></h3>
+              <p>地域の食や、からだにやさしい選択にふれる。おいしさから考える、これからの暮らし。</p>
+            </div>
+          </article>
+
+          <article class="exp-card">
+            <img src="images/05_boy_insect_observation.png" alt="子どもが虫めがねで生き物を観察する様子">
+            <div class="exp-body">
+              <h3>見つける <em>FIND</em></h3>
+              <p>会場に並ぶブースをめぐって、未来の暮らしのヒント探し。おどろきが待っています。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ビンゴ ===== -->
+    <section class="section" id="bingo">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">BINGO</span>
+          <h2>親子サステナブルビンゴ</h2>
+          <p>会場をめぐる楽しみ方に迷ったら、まずはこれ。1枚のシートが、一日の道しるべになります。</p>
+        </div>
+
+        <div class="bingo">
+          <img src="images/06_eco_game_area.png" alt="親子でサステナブルビンゴを楽しむ様子">
+          <div>
+            <div class="steps">
+              <div class="step">
+                <span class="step-no">1</span>
+                <div>
+                  <b>受付でシートをもらう</b>
+                  <p>入口の総合受付でお渡しします。参加は無料です。</p>
+                </div>
+              </div>
+              <div class="step">
+                <span class="step-no">2</span>
+                <div>
+                  <b>チェックポイントをめぐる</b>
+                  <p>環境・食・健康・地域。4つのテーマのヒントを集めよう！</p>
+                </div>
+              </div>
+              <div class="step">
+                <span class="step-no">3</span>
+                <div>
+                  <b>そろったら景品と交換</b>
+                  <p>全部集めると記念品をプレゼント。交換は16:00まで。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 1日の流れ ===== -->
+    <section class="section section-soft" id="schedule">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">SCHEDULE</span>
+          <h2>2日間の流れ</h2>
+          <p>10日はおうちから、11日は会場で。どちらか一方だけの参加でも楽しめます。</p>
+        </div>
+
+        <div class="day-block">
+          <p class="day-label online">💻 10月10日(土)　オンライン</p>
+          <div class="timeline">
+            <div class="tl-item">
+              <p class="tl-time">10:00〜</p>
+              <b>オンライン出展スタート</b>
+              <p>動画・資料で、各団体のサステナブルな取り組みをご覧いただけます。期間中はいつでも視聴できます。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-block">
+          <p class="day-label">🎪 10月11日(日)　幕張メッセ 国際会議場</p>
+          <div class="timeline">
+            <div class="tl-item">
+              <p class="tl-time">10:00</p>
+              <b>開場</b>
+              <p>体験プログラム、ステージ、マルシェ、サステナブルビンゴがスタートします。</p>
+            </div>
+            <div class="tl-item">
+              <p class="tl-time">11:00〜</p>
+              <b>特設ステージ：リユース工作実演パフォーマンス</b>
+              <p>捨てるはずだったものが、目の前で変身します。</p>
+            </div>
+            <div class="tl-item">
+              <p class="tl-time">13:30〜</p>
+              <b>未来の暮らしキャラクター大集合！クイズ大会</b>
+              <p>小さなお子さんも一緒に参加できます。</p>
+            </div>
+            <div class="tl-item">
+              <p class="tl-time">16:00</p>
+              <b>閉場・ビンゴ景品引き換え終了</b>
+              <p>景品交換をお忘れなく。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== オンライン ===== -->
+    <section class="section" id="online">
+      <div class="wrap online-grid">
+        <img src="images/07_online_event_family.png" alt="家族でタブレットを見ながらオンライン企画を楽しむ様子">
+        <div>
+          <span class="eyebrow">ONLINE</span>
+          <h2 style="font-size:clamp(23px,3vw,30px); margin-top:12px;">会場に行けなくても、参加できます</h2>
+          <ul class="tick">
+            <li>動画とインタビューで、団体の活動と想いを紹介</li>
+            <li>好きな時間に、好きなだけ。おうちのペースで</li>
+            <li>遠方の方、小さなお子さん連れの方にも</li>
+          </ul>
+          <a class="btn btn-sun" href="#coming">公開予定をチェック</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== これから公開 ===== -->
+    <section class="section section-soft" id="coming">
+      <div class="wrap">
+        <div class="coming">
+          <span class="eyebrow">COMING SOON</span>
+          <h2 style="font-size:clamp(22px,3vw,28px); margin-top:12px;">これから公開される情報</h2>
+          <p style="color:var(--ink-mute); margin-top:12px; font-size:15px;">
+            今年の出展団体とレイアウトを、実行委員会で調整しています。
+          </p>
+          <div class="coming-list">
+            <div class="coming-item">
+              <b>出展ブース一覧</b>
+              <p>千葉県内の市民団体・企業・大学・自治体が参加します。</p>
+            </div>
+            <div class="coming-item">
+              <b>オンライン出展リスト</b>
+              <p>動画や資料で紹介する団体の一覧です。</p>
+            </div>
+            <div class="coming-item">
+              <b>会場マップ</b>
+              <p>ベビーカー優先通路や授乳室の位置も記載します。</p>
+            </div>
+          </div>
+          <p class="when">📅 2026年9月上旬 公開予定</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== アクセス ===== -->
+    <section class="section" id="access">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">ACCESS</span>
+          <h2>アクセス</h2>
+          <p>幕張メッセ 国際会議場（千葉市美浜区中瀬2-1）</p>
+        </div>
+
+        <div class="access-grid">
+          <div>
+            <div class="access-card">
+              <h4>🚃 電車でお越しの方</h4>
+              <p>JR京葉線「海浜幕張駅」から徒歩約5分</p>
+            </div>
+            <div class="access-card">
+              <h4>🚌 バスでお越しの方</h4>
+              <p>幕張メッセ中央バス停すぐ</p>
+            </div>
+            <div class="access-card">
+              <h4>🚗 お車でお越しの方</h4>
+              <p>併設の有料駐車場（普通車1日1,000円）がありますが、混雑が予想されます。公共交通機関でのご来場を推奨しています。</p>
+            </div>
+          </div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps?q=%E5%B9%95%E5%BC%B5%E3%83%A1%E3%83%83%E3%82%BB%E5%9B%BD%E9%9A%9B%E4%BC%9A%E8%AD%B0%E5%A0%B4&output=embed" title="幕張メッセ国際会議場のGoogleマップ" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ（details なのでJS不要） ===== -->
+    <section class="section section-soft" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>よくある質問</h2>
+          <p>来場に関して寄せられるご質問と回答をまとめました。</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq">
+            <summary>駐車場はありますか？</summary>
+            <div class="faq-body">幕張メッセ併設の有料駐車場（普通車1日1,000円）がございますが、混雑が予想されるため、公共交通機関でのご来場を推奨しております。</div>
+          </details>
+          <details class="faq">
+            <summary>何歳くらいの子どもが楽しめますか？</summary>
+            <div class="faq-body">未就学のお子さんから小学生を中心に、大人の方まで楽しめる内容です。ベビーカーのまま入場でき、授乳室・おむつ交換台もご用意しています。</div>
+          </details>
+          <details class="faq">
+            <summary>予約は必要ですか？</summary>
+            <div class="faq-body">入場は無料で、事前予約も不要です。ただし一部の特別体験型ワークショップのみ、当日会場での受付や整理券配布を行う場合があります。</div>
+          </details>
+          <details class="faq">
+            <summary>雨が降ったらどうなりますか？</summary>
+            <div class="faq-body">屋内（国際会議場）での開催となるため、雨天時でも通常どおり開催いたします。</div>
+          </details>
+          <details class="faq">
+            <summary>会場で食事はできますか？</summary>
+            <div class="faq-body">再入場は自由です。会場周辺の飲食店もご利用いただけます。会場内の飲食スペースについては、決まりしだいお知らせします。</div>
+          </details>
+        </div>
+
+        <p class="faq-after">
+          ここに答えがなかったら、<a href="#contact">遠慮なく聞いてください</a>。
         </p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#view">体験を見る</a>
-          <a class="btn btn-secondary" href="#info">来場情報を確認</a>
-        </div>
-        <div style="display:flex; align-items:center; gap:12px; margin-top:18px; flex-wrap:wrap;">
-          <span style="color:var(--text-muted); font-weight:700; font-size:14px;">最新情報はこちら</span>
-          <a href="https://www.instagram.com/ecomessechiba_official" target="_blank" rel="noopener" aria-label="Instagram" style="width:42px; height:42px; border-radius:50%; border:1px solid rgba(24,111,72,0.18); display:inline-flex; align-items:center; justify-content:center; color:var(--primary); background:#fff; box-shadow:var(--shadow-soft);">
-            <svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-              <circle cx="12" cy="12" r="4"></circle>
-              <circle cx="17.5" cy="6.5" r="1"></circle>
-            </svg>
-          </a>
-          <a href="https://x.com/ecomessechiba" target="_blank" rel="noopener" aria-label="X" style="width:42px; height:42px; border-radius:50%; border:1px solid rgba(24,111,72,0.18); display:inline-flex; align-items:center; justify-content:center; color:var(--primary); background:#fff; box-shadow:var(--shadow-soft); font-weight:800; font-size:19px;">X</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-img-gradient">
-          <img src="images/01_eco_festival_main.png" alt="エコメッセちばの会場風景">
-        </div>
-        <div class="hero-visual-badge">
-          <p>入場無料・親子で参加できます</p>
-        </div>
       </div>
     </section>
 
-    <!-- ── イベント実績 ── -->
-    <section class="section reveal">
-      <div class="section-head">
-        <h2>イベント実績</h2>
-        <p>1996年から共創関係のもとに築いてきた信頼ある規模感です。</p>
-      </div>
-      <!-- ※公開前に正式な最新数値へ差し替え -->
-      <div class="stats-container">
-        <div class="stat-card">
-          <strong>31<span style="font-size:16px;">回目</span></strong>
-          <p>地域の環境啓発イベントとしての歴史</p>
-        </div>
-        <div class="stat-card">
-          <strong>7,500<span style="font-size:16px;">人</span></strong>
-          <p>前回来場実績（千葉近郊のファミリー層中心）</p>
-        </div>
-        <div class="stat-card">
-          <strong>100<span style="font-size:16px;">団体</span></strong>
-          <p>産官学民の多様な出展共創規模</p>
-        </div>
-      </div>
-    </section>
+    <!-- ===== お問い合わせ ===== -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="cf-inner">
 
-    <!-- ── 1. 今年の見どころ ── -->
-    <section class="section reveal" id="view">
-      <div class="section-head">
-        <h2>サステナブル体験プログラム</h2>
-        <p>サステナブルな暮らしを、親子で楽しく体験できる4つの入口。</p>
-      </div>
-      
-      <div class="choice-section" style="padding:0; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:32px;">
-        
-        <div class="choice-card">
-          <div class="choice-img-wrapper" style="height:200px;">
-            <!-- Unsplash: 手を動かして工作する様子 -->
-            <!-- 出典: https://unsplash.com/photos/U6P7u8l4w24 (by Sigmund) -->
-            <img src="images/02_recycle_craft_family.png" alt="親子でリサイクル工作を楽しむ様子">
-          </div>
-          <div class="choice-body" style="padding:24px;">
-            <h3 style="font-size:20px;">つくる</h3>
-            <p style="font-size:14px; margin-bottom:0;">身近な素材を活かして、ものを大切にする感覚と創造力を育てます。</p>
-          </div>
-        </div>
+          <header class="cf-head">
+            <span class="eyebrow">CONTACT</span>
+            <h2 class="cf-title">お問い合わせ</h2>
+            <p class="cf-lead">
+              来場のこと、ボランティアのこと。ご質問はこちらから。<br>
+              入力は1分ほど、2〜3営業日以内に実行委員会からお返事します。
+            </p>
+          </header>
 
-        <div class="choice-card">
-          <div class="choice-img-wrapper" style="height:200px;">
-            <!-- Unsplash: ボードゲームやゲームを楽しむ様子 -->
-            <!-- 出典: https://unsplash.com/photos/Jz5Qx4G2M3Q (by Robert Collins) -->
-            <img src="images/03_family_recycling_learning.png" alt="親子でリサイクルについて学ぶ様子">
-          </div>
-          <div class="choice-body" style="padding:24px;">
-            <h3 style="font-size:20px;">遊ぶ</h3>
-            <p style="font-size:14px; margin-bottom:0;">ゲームやクイズを通じて、身の回りのサステナブルを楽しく発見します。</p>
-          </div>
-        </div>
+          <!-- ===================================================================
+               ★ここに Google Apps Script のウェブアプリURLを貼る★
+               手順は form_gas/GAS設置手順.md を参照。
+               貼る値は  https://script.google.com/macros/s/×××××/exec  の形。
+               貼るまでは action="" のままなので、押しても何も起きない。
+               =================================================================== -->
+          <form class="cf-form" method="POST" action="">
 
-        <div class="choice-card">
-          <div class="choice-img-wrapper" style="height:200px;">
-            <!-- Unsplash: 新鮮な野菜やマルシェ -->
-            <!-- 出典: https://unsplash.com/photos/GZ0QJ11N00U (by nrd) -->
-            <img src="images/04_farmers_market.png" alt="地域のファーマーズマーケット">
-          </div>
-          <div class="choice-body" style="padding:24px;">
-            <h3 style="font-size:20px;">ふれあう</h3>
-            <p style="font-size:14px; margin-bottom:0;">地域の食やからだにやさしい選択から、ウェルビーイングを味わいます。</p>
-          </div>
-        </div>
-
-        <div class="choice-card">
-          <div class="choice-img-wrapper" style="height:200px;">
-            <!-- Unsplash: 子どもが虫眼鏡で何かを見つけている写真 -->
-            <!-- 出典: https://unsplash.com/photos/s3S54Lg9gJk (by Ksenia Chernaya) -->
-            <img src="images/05_boy_insect_observation.png" alt="子どもが昆虫を観察する様子">
-          </div>
-          <div class="choice-body" style="padding:24px;">
-            <h3 style="font-size:20px;">見つける</h3>
-            <p style="font-size:14px; margin-bottom:0;">会場のブースから、未来の暮らしのヒントを見つけましょう。</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ── 6. 親子向けサステナブルビンゴ ── -->
-    <section class="section reveal" style="text-align:center;">
-      <div class="section-head">
-        <h2>親子サステナブルビンゴ</h2>
-        <p>会場内のチェックポイントをめぐって、環境・食・健康・地域のヒントを集めよう！<br>全部集めると記念品をプレゼント。</p>
-      </div>
-      <!-- Unsplash: 親子が笑顔で指差している写真 -->
-      <img src="images/06_eco_game_area.png" alt="親子でサステナブルビンゴを楽しむ様子" style="max-width:600px; width:100%; border-radius: var(--radius-md); box-shadow: var(--shadow-medium); margin-top:20px;">
-    </section>
-
-    <!-- ── 7. 出展ブース一覧 ── -->
-    <section class="section reveal">
-      <div class="section-head">
-        <h2>出展ブース一覧</h2>
-        <p>千葉県内の市民団体、企業、大学、自治体が、サステナビリティとウェルビーイングにつながる取り組みを紹介します。</p>
-      </div>
-      <div class="info-strip" style="background:#fff; border: 1px solid rgba(0,0,0,0.05);">
-        <p style="text-align:center; font-weight:700; color:var(--primary);">※詳細な出展リストは、2026年9月上旬に公開予定です。お楽しみに！</p>
-      </div>
-    </section>
-
-    <!-- ── 8. オンライン出展一覧 ── -->
-    <section class="section reveal">
-      <div class="section-head">
-        <h2>オンラインで学ぶ</h2>
-        <p>会場に来られない方も、動画や資料でサステナブルな取り組みに触れられます。</p>
-      </div>
-      <div class="info-strip" style="background:#fff; border: 1px solid rgba(0,0,0,0.05);">
-        <p style="text-align:center; font-weight:700; color:var(--primary);">※オンライン出展リストは、2026年9月上旬に公開予定です。お楽しみに！</p>
-      </div>
-    </section>
-
-    <!-- ── 9. タイムスケジュール ── -->
-    <section class="section reveal">
-      <div class="section-head">
-        <h2>タイムスケジュール</h2>
-      </div>
-      <div class="news-list">
-        <div class="news-item" style="pointer-events:none;">
-          <time>10月10日(土)<br>10:00~</time>
-          <span><b>オンライン出展スタート</b><br>動画・資料で、各団体のサステナブルな取り組みをご覧いただけます。</span>
-        </div>
-      </div>
-      <div class="news-list" style="margin-top:24px;">
-        <div class="news-item" style="pointer-events:none;">
-          <time>10月11日(日)<br>10:00～16:00</time>
-          <span><b>幕張メッセ 国際会議場で開催</b><br>親子向け体験プログラム、ステージ、マルシェ、サステナブルビンゴを実施します。</span>
-        </div>
-        <div class="news-item" style="pointer-events:none;">
-          <time>11:00~</time>
-          <span>特設ステージ：リユース工作実演パフォーマンス</span>
-        </div>
-        <div class="news-item" style="pointer-events:none;">
-          <time>13:30~</time>
-          <span>未来の暮らしキャラクター大集合！クイズ大会</span>
-        </div>
-        <div class="news-item" style="pointer-events:none;">
-          <time>16:00</time>
-          <span>閉場・サステナブルビンゴ景品引き換え終了</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 9. 会場マップ ── -->
-    <section class="section reveal" style="text-align:center;">
-      <div class="section-head">
-        <h2>会場マップ</h2>
-        <p>幕張メッセ 国際会議場 2階の広々としたフロアをフル活用！</p>
-      </div>
-      <div class="info-strip">
-        <p style="font-weight:700; color:var(--primary); font-size:16px;">マップ詳細は後日公開予定</p>
-        <p style="color:var(--text-muted); font-size:14px; margin-top:8px;">現在、出展レイアウト調整中です。ベビーカー優先通路や授乳室の位置も記載します。</p>
-      </div>
-    </section>
-
-    <!-- ── 10. 来場者向けの重要情報 ── -->
-    <section class="section reveal" id="info">
-      <div class="section-head">
-        <h2>来場に関する重要情報</h2>
-        <p>安心して心地よく楽しんでいただくために、事前のご確認をお願いします。</p>
-      </div>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>🎟️ 入場料・予約</h3>
-          <p>入場料は<b>完全無料</b>です。一部の特別体験型ワークショップを除き、事前予約も不要です。</p>
-        </div>
-        <div class="feature-card">
-          <h3>🍼 ベビーカー・授乳室</h3>
-          <p>ベビーカーのまま入場可能です。会場内に臨時のおむつ交換台＆個室授乳スペースを完備しています。</p>
-        </div>
-        <div class="feature-card">
-          <h3>🌦️ 天候について</h3>
-          <p>屋内（国際会議場）での開催となるため、<b>雨天時でも通常通り開催</b>いたします。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 11. アクセス ── -->
-    <section class="section reveal">
-      <div class="section-head">
-        <h2>アクセス</h2>
-        <p>幕張メッセ国際会議場（千葉市美浜区中瀬2-1）</p>
-      </div>
-      <div class="info-grid">
-        <div class="info-item">
-          <h4>電車でお越しの方</h4>
-          <p>JR京葉線「海浜幕張駅」から徒歩約5分</p>
-        </div>
-        <div class="info-item">
-          <h4>バスでお越しの方</h4>
-          <p>幕張メッセ中央バス停すぐ</p>
-        </div>
-      </div>
-      <!-- Googleマップ埋め込み用エリア -->
-      <div class="map-embed">
-        <iframe src="https://www.google.com/maps?q=%E5%B9%95%E5%BC%B5%E3%83%A1%E3%83%83%E3%82%BB%E5%9B%BD%E9%9A%9B%E4%BC%9A%E8%AD%B0%E5%A0%B4&output=embed" title="幕張メッセ国際会議場のGoogleマップ" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section>
-
-    <!-- ── 12. よくある質問 ── -->
-    <section class="section reveal" id="faq">
-      <div class="section-head">
-        <h2>よくある質問</h2>
-        <p>来場に関して寄せられるご質問と回答をまとめました。</p>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question">駐車場はありますか？ <span class="toggle-icon">+</span></button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              幕張メッセ併設の有料駐車場（普通車1日1,000円）がございますが、混雑が予想されるため、公共交通機関でのご来場を推奨しております。
+            <!-- 制御用（利用者には見えない）── メールの並び順・返信先・Bot対策 -->
+            <input type="hidden" name="_order"
+                   value="お名前,メールアドレス,電話番号,ご用件,お問い合わせ内容,個人情報の取り扱い">
+            <input type="hidden" name="_reply" value="メールアドレス">
+            <div class="cf-hp" aria-hidden="true">
+              <label for="cf-company">会社名（この欄は入力しないでください）</label>
+              <input type="text" id="cf-company" name="_gotcha" tabindex="-1" autocomplete="off">
             </div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">何歳くらいの子どもが楽しめますか？ <span class="toggle-icon">+</span></button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              3歳頃から楽しめるシンプルなクイズや、小学生が自由研究として学べる本格的な廃材工作ワークショップまで幅広く揃っています。
+
+            <div class="cf-row">
+              <label for="cf-name">お名前 <span class="cf-req">必須</span></label>
+              <input type="text" id="cf-name" name="お名前" required autocomplete="name"
+                     placeholder="千葉 花子">
             </div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">ペットを連れて入場できますか？ <span class="toggle-icon">+</span></button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              介助犬・盲導犬・聴導犬を除くペットを連れての屋内エリアへの入場はご遠慮いただいております。
+
+            <div class="cf-row">
+              <label for="cf-email">メールアドレス <span class="cf-req">必須</span></label>
+              <input type="email" id="cf-email" name="メールアドレス" required autocomplete="email"
+                     placeholder="hanako@example.com">
             </div>
-          </div>
+
+            <div class="cf-row">
+              <label for="cf-tel">電話番号 <span class="cf-opt">任意</span></label>
+              <input type="tel" id="cf-tel" name="電話番号" inputmode="tel" autocomplete="tel"
+                     placeholder="08012345678">
+            </div>
+
+            <div class="cf-row">
+              <label for="cf-subject">ご用件 <span class="cf-req">必須</span></label>
+              <select id="cf-subject" name="ご用件" required>
+                <option value="">選択してください</option>
+                <option>イベントについて</option>
+                <option>取材について</option>
+                <option>その他</option>
+              </select>
+            </div>
+
+            <div class="cf-row">
+              <label for="cf-message">お問い合わせ内容 <span class="cf-req">必須</span></label>
+              <textarea id="cf-message" name="お問い合わせ内容" rows="6" required
+                        placeholder="ご質問やご相談を、思ったままお書きください"></textarea>
+            </div>
+
+            <div class="cf-agree">
+              <label>
+                <input type="checkbox" name="個人情報の取り扱い" value="同意する" required>
+                <span>個人情報の取り扱いに同意します <span class="cf-req">必須</span></span>
+              </label>
+            </div>
+
+            <!-- ===================================================================
+                 ★GASのウェブアプリURLが決まったら、次の2つを直す★
+                   1. 上の <form action=""> にURLを貼る
+                   2. 下の class="cf-actions is-pending" から is-pending を消す
+                 それまでは送信ボタンを隠し、メールで確実に届く形にしてある。
+                 =================================================================== -->
+            <div class="cf-actions is-pending">
+              <button type="submit" class="btn btn-main cf-submit">送信する</button>
+              <a class="btn btn-main cf-submit cf-mail-fallback" href="mailto:info@ecomesse.com?subject=%E3%80%90%E3%82%A8%E3%82%B3%E3%83%A1%E3%83%83%E3%82%BB%E3%81%A1%E3%81%B0%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">メールで送る</a>
+              <p class="cf-alt">うまく送れない場合は <a href="mailto:info@ecomesse.com">info@ecomesse.com</a> へ</p>
+            </div>
+
+          </form>
         </div>
       </div>
-    </section>
-
-    <!-- ── お問い合わせ ── -->
-    <section class="section reveal" id="contact" style="text-align:center; background-color: var(--accent-light) !important; border-radius: var(--radius-lg); padding:60px 24px;">
-      <h2 style="color:var(--primary); margin-bottom:16px;">お問い合わせ</h2>
-      <p style="color:var(--text-muted); margin-bottom:32px;">一般来場やボランティア希望に関する疑問は、お気軽にお問い合わせください。</p>
-      <a class="btn btn-primary" href="mailto:info@ecomesse.com">一般来場・プログラムについてのお問合せ</a>
     </section>
 
   </main>
 
-  <!-- ===== Footer ===== -->
+  <!-- ===== フッター ===== -->
   <footer>
-    <div class="footer-inner">
-      <a class="logo footer-logo" href="#main">
-        <span class="logo-mark">e</span>
-        <span><b>エコメッセちば</b><small>2026</small></span>
+    <div class="wrap">
+      <a class="logo" href="#top">
+        <img class="logo-img" src="images/ecomesse_logo_mark.png" alt="">
+        <span class="logo-name">エコメッセちば</span>
+        <em class="logo-year">2026</em>
       </a>
-      <div style="display:flex; justify-content:center; align-items:center; gap:14px; margin:24px 0;">
-        <a href="https://www.instagram.com/ecomessechiba_official" target="_blank" rel="noopener" aria-label="Instagram" style="width:44px; height:44px; border-radius:50%; border:1px solid rgba(24,111,72,0.18); display:inline-flex; align-items:center; justify-content:center; color:var(--primary); background:#fff;">
+
+      <div class="footer-sns">
+        <a class="sns-btn" href="https://www.instagram.com/ecomessechiba_official" target="_blank" rel="noopener" aria-label="Instagram">
           <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="3" y="3" width="18" height="18" rx="5"></rect>
             <circle cx="12" cy="12" r="4"></circle>
             <circle cx="17.5" cy="6.5" r="1"></circle>
           </svg>
         </a>
-        <a href="https://x.com/ecomessechiba" target="_blank" rel="noopener" aria-label="X" style="width:44px; height:44px; border-radius:50%; border:1px solid rgba(24,111,72,0.18); display:inline-flex; align-items:center; justify-content:center; color:var(--primary); background:#fff; font-weight:800; font-size:20px;">X</a>
+        <a class="sns-btn" href="https://x.com/ecomessechiba" target="_blank" rel="noopener" aria-label="X">X</a>
       </div>
-      <div class="footer-contact">
+
+      <div class="footer-info">
         <p><strong>主催：</strong>エコメッセちば実行委員会</p>
         <p><strong>事務局：</strong>〒260-0024 千葉市中央区中央港1-11-1（一財）千葉県環境財団 業務部 環境活動支援課気付</p>
-        <div class="footer-contact-links">
+        <div class="footer-links">
           <a href="tel:08053740019">TEL 080-5374-0019</a>
           <span>FAX 043-247-4152</span>
           <a href="mailto:info@ecomesse.com">info@ecomesse.com</a>
         </div>
       </div>
+
       <div class="footer-bottom">
+        <p class="footer-notice">当サイトの内容、テキスト、画像等の無断転載・無断使用を固く禁じます。</p>
         <p>&copy; 2026 Eco Messe Chiba All Rights Reserved.</p>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- モバイル固定バー -->
+  <div class="mobile-bar">
+    <a class="btn btn-sub" href="#access">アクセス</a>
+    <a class="btn btn-sub" href="#experience">体験を見る</a>
+    <a class="btn btn-main" href="#contact">相談する</a>
+  </div>
+
 </body>
 </html>
