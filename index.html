@@ -58,7 +58,7 @@
         <a href="#access">アクセス</a>
         <a href="#faq">よくある質問</a>
       </nav>
-      <a class="btn btn-main header-cta" href="#contact">お問い合わせ</a>
+      <a class="btn btn-main header-cta" href="contact.html">お問い合わせ</a>
 
       <!-- モバイルメニュー：JSを使わず details で開閉 -->
       <details class="menu-drawer">
@@ -70,7 +70,7 @@
           <a href="#online">オンライン</a>
           <a href="#access">アクセス</a>
           <a href="#faq">よくある質問</a>
-          <a href="#contact">お問い合わせ</a>
+          <a href="contact.html">お問い合わせ</a>
         </div>
       </details>
     </div>
@@ -111,7 +111,7 @@
           </div>
 
           <p class="hero-ask">
-            行こうか迷っている方へ。<a href="#contact">気になることを聞いてみる</a>
+            行こうか迷っている方へ。<a href="contact.html">気になることを聞いてみる</a>
           </p>
 
           <div class="hero-sns">
@@ -424,96 +424,20 @@
         </div>
 
         <p class="faq-after">
-          ここに答えがなかったら、<a href="#contact">遠慮なく聞いてください</a>。
+          ここに答えがなかったら、<a href="contact.html">遠慮なく聞いてください</a>。
         </p>
       </div>
     </section>
 
-    <!-- ===== お問い合わせ ===== -->
+    <!-- ===== お問い合わせ（フォームは別ページ） ===== -->
     <section class="section" id="contact">
       <div class="wrap">
-        <div class="cf-inner">
-
-          <header class="cf-head">
-            <span class="eyebrow">CONTACT</span>
-            <h2 class="cf-title">お問い合わせ</h2>
-            <p class="cf-lead">
-              来場のこと、ボランティアのこと。ご質問はこちらから。<br>
-              入力は1分ほど、2〜3営業日以内に実行委員会からお返事します。
-            </p>
-          </header>
-
-          <!-- ===================================================================
-               ★ここに Google Apps Script のウェブアプリURLを貼る★
-               手順は form_gas/GAS設置手順.md を参照。
-               貼る値は  https://script.google.com/macros/s/×××××/exec  の形。
-               貼るまでは action="" のままなので、押しても何も起きない。
-               =================================================================== -->
-          <form class="cf-form" method="POST" action="">
-
-            <!-- 制御用（利用者には見えない）── メールの並び順・返信先・Bot対策 -->
-            <input type="hidden" name="_order"
-                   value="お名前,メールアドレス,電話番号,ご用件,お問い合わせ内容,個人情報の取り扱い">
-            <input type="hidden" name="_reply" value="メールアドレス">
-            <div class="cf-hp" aria-hidden="true">
-              <label for="cf-company">会社名（この欄は入力しないでください）</label>
-              <input type="text" id="cf-company" name="_gotcha" tabindex="-1" autocomplete="off">
-            </div>
-
-            <div class="cf-row">
-              <label for="cf-name">お名前 <span class="cf-req">必須</span></label>
-              <input type="text" id="cf-name" name="お名前" required autocomplete="name"
-                     placeholder="千葉 花子">
-            </div>
-
-            <div class="cf-row">
-              <label for="cf-email">メールアドレス <span class="cf-req">必須</span></label>
-              <input type="email" id="cf-email" name="メールアドレス" required autocomplete="email"
-                     placeholder="hanako@example.com">
-            </div>
-
-            <div class="cf-row">
-              <label for="cf-tel">電話番号 <span class="cf-opt">任意</span></label>
-              <input type="tel" id="cf-tel" name="電話番号" inputmode="tel" autocomplete="tel"
-                     placeholder="08012345678">
-            </div>
-
-            <div class="cf-row">
-              <label for="cf-subject">ご用件 <span class="cf-req">必須</span></label>
-              <select id="cf-subject" name="ご用件" required>
-                <option value="">選択してください</option>
-                <option>イベントについて</option>
-                <option>取材について</option>
-                <option>その他</option>
-              </select>
-            </div>
-
-            <div class="cf-row">
-              <label for="cf-message">お問い合わせ内容 <span class="cf-req">必須</span></label>
-              <textarea id="cf-message" name="お問い合わせ内容" rows="6" required
-                        placeholder="ご質問やご相談を、思ったままお書きください"></textarea>
-            </div>
-
-            <div class="cf-agree">
-              <label>
-                <input type="checkbox" name="個人情報の取り扱い" value="同意する" required>
-                <span>個人情報の取り扱いに同意します <span class="cf-req">必須</span></span>
-              </label>
-            </div>
-
-            <!-- ===================================================================
-                 ★GASのウェブアプリURLが決まったら、次の2つを直す★
-                   1. 上の <form action=""> にURLを貼る
-                   2. 下の class="cf-actions is-pending" から is-pending を消す
-                 それまでは送信ボタンを隠し、メールで確実に届く形にしてある。
-                 =================================================================== -->
-            <div class="cf-actions is-pending">
-              <button type="submit" class="btn btn-main cf-submit">送信する</button>
-              <a class="btn btn-main cf-submit cf-mail-fallback" href="mailto:info@ecomesse.com?subject=%E3%80%90%E3%82%A8%E3%82%B3%E3%83%A1%E3%83%83%E3%82%BB%E3%81%A1%E3%81%B0%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">メールで送る</a>
-              <p class="cf-alt">うまく送れない場合は <a href="mailto:info@ecomesse.com">info@ecomesse.com</a> へ</p>
-            </div>
-
-          </form>
+        <div class="contact-cta">
+          <span class="eyebrow">CONTACT</span>
+          <h2>気になることは、お気軽に</h2>
+          <p>来場のこと、ボランティアのこと。どんな些細なことでもどうぞ。<br>2〜3営業日以内に実行委員会からお返事します。</p>
+          <a class="btn btn-main contact-cta-btn" href="contact.html">お問い合わせフォームへ</a>
+          <p class="contact-cta-alt">メールなら <a href="mailto:info@ecomesse.com">info@ecomesse.com</a></p>
         </div>
       </div>
     </section>
@@ -552,6 +476,7 @@
 
       <div class="footer-bottom">
         <p class="footer-notice">当サイトの内容、テキスト、画像等の無断転載・無断使用を固く禁じます。</p>
+        <p><a class="footer-privacy" href="privacy.html">個人情報の取り扱いについて</a></p>
         <p>&copy; 2026 Eco Messe Chiba All Rights Reserved.</p>
       </div>
     </div>
@@ -561,7 +486,7 @@
   <div class="mobile-bar">
     <a class="btn btn-sub" href="#access">アクセス</a>
     <a class="btn btn-sub" href="#experience">体験を見る</a>
-    <a class="btn btn-main" href="#contact">相談する</a>
+    <a class="btn btn-main" href="contact.html">相談する</a>
   </div>
 
 </body>
