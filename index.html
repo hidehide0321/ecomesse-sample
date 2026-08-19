@@ -179,6 +179,9 @@
             <p>産官学民の多様な出展共創規模</p>
           </div>
         </div>
+        <div class="history-link">
+          <a class="btn btn-sub" href="https://www.ecomesse.com/wp-content/uploads/2026/03/aa834049268a6180abbf748b218c8e20.pdf" target="_blank" rel="noopener">30年の歴史はこちら</a>
+        </div>
       </div>
     </section>
 
@@ -192,37 +195,49 @@
         </div>
 
         <div class="exp-grid">
-          <article class="exp-card">
+          <button class="exp-card" type="button" data-category="つくる" aria-pressed="false" aria-controls="exhibitor-directory">
             <img src="images/02_recycle_craft_family.png" alt="親子で牛乳パックや空き容器を使って工作を楽しむ様子">
             <div class="exp-body">
               <h3>つくる <em>MAKE</em></h3>
               <p>牛乳パックや落ち葉など、身近な素材から。ものを大切にする感覚と創造力が育ちます。</p>
             </div>
-          </article>
+          </button>
 
-          <article class="exp-card">
+          <button class="exp-card" type="button" data-category="遊ぶ" aria-pressed="false" aria-controls="exhibitor-directory">
             <img src="images/03_family_recycling_learning.png" alt="親子でリサイクルについてゲームで学ぶ様子">
             <div class="exp-body">
               <h3>遊ぶ <em>PLAY</em></h3>
               <p>ゲームやクイズで、身の回りのサステナブルを発見。遊んでいるうちに自然と身につきます。</p>
             </div>
-          </article>
+          </button>
 
-          <article class="exp-card">
+          <button class="exp-card" type="button" data-category="ふれあう" aria-pressed="false" aria-controls="exhibitor-directory">
             <img src="images/04_farmers_market.png" alt="地域の野菜が並ぶファーマーズマーケットの様子">
             <div class="exp-body">
               <h3>ふれあう <em>TASTE</em></h3>
               <p>地域の食や、からだにやさしい選択にふれる。おいしさから考える、これからの暮らし。</p>
             </div>
-          </article>
+          </button>
 
-          <article class="exp-card">
+          <button class="exp-card" type="button" data-category="見つける" aria-pressed="false" aria-controls="exhibitor-directory">
             <img src="images/05_boy_insect_observation.png" alt="子どもが虫めがねで生き物を観察する様子">
             <div class="exp-body">
               <h3>見つける <em>FIND</em></h3>
               <p>会場に並ぶブースをめぐって、未来の暮らしのヒント探し。おどろきが待っています。</p>
             </div>
-          </article>
+          </button>
+        </div>
+
+        <div class="exhibitor-directory" id="exhibitor-directory" hidden>
+          <div class="exhibitor-directory-head">
+            <span class="eyebrow">EXHIBITORS</span>
+            <h3><span id="selected-category"></span>の出展者</h3>
+            <p id="exhibitor-count"></p>
+          </div>
+          <div class="exhibitor-grid" id="exhibitor-grid" aria-live="polite"></div>
+          <div class="exhibitor-close-wrap">
+            <button class="btn btn-sub exhibitor-close" id="exhibitor-close" type="button">閉じる</button>
+          </div>
         </div>
       </div>
     </section>
@@ -343,10 +358,6 @@
           </p>
           <div class="coming-list">
             <div class="coming-item">
-              <b>出展ブース一覧</b>
-              <p>千葉県内の市民団体・企業・大学・自治体が参加します。</p>
-            </div>
-            <div class="coming-item">
               <b>オンライン出展リスト</b>
               <p>動画や資料で紹介する団体の一覧です。</p>
             </div>
@@ -442,6 +453,22 @@
       </div>
     </section>
 
+    <section class="section section-soft supporters-section" aria-labelledby="supporters-title">
+      <div class="wrap">
+        <div class="supporters-container">
+          <h2 id="supporters-title">協賛・後援</h2>
+          <div class="supporters-group">
+            <h3>協賛</h3>
+            <p>BSC実行委員会／（株）テクノリライブ／生活協同組合コープみらい／千葉県生活協同組合連合会／（株）京葉銀行／（株）千葉銀行／（株）千葉興業銀行／（一社）千葉県経済協議会／（一社）千葉県環境保全協議会／（一社）千葉県産業資源循環協会／三番瀬写真展実行委員会</p>
+          </div>
+          <div class="supporters-group">
+            <h3>後援</h3>
+            <p>環境省関東環境局／千葉県教育庁／千葉市教育委員会／（株）幕張メッセ／幕張新都心まちづくり協議会／千葉商工会議所／（一社）千葉県商工会議所連合会／（株）千葉日報社／（公社）千葉市観光協会／朝日新聞千葉総局／市原商工会議所／千葉県商工会連合会／毎日新聞社千葉支局／読売新聞千葉支局／東京新聞千葉支局／日本経済新聞社千葉支局／時事通信社千葉支局／（一社）共同通信社千葉支局／（株）ベイエフエム／千葉県ケーブルテレビ協議会／産経新聞社千葉総局／JICA東京／日刊工業新聞社千葉支局／ESD活動支援センター</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ===== フッター ===== -->
@@ -475,6 +502,7 @@
       </div>
 
       <div class="footer-bottom">
+        <p class="footer-grant">「エコメッセちば2026」は、令和８年度ちば環境再生基金「環境活動見本市」の助成を受けて実施します。</p>
         <p class="footer-notice">当サイトの内容、テキスト、画像等の無断転載・無断使用を固く禁じます。</p>
         <p><a class="footer-privacy" href="privacy.html">個人情報の取り扱いについて</a></p>
         <p>&copy; 2026 Eco Messe Chiba All Rights Reserved.</p>
@@ -489,5 +517,7 @@
     <a class="btn btn-main" href="contact.html">相談する</a>
   </div>
 
+  <script src="exhibitors-data.js"></script>
+  <script src="exhibitors.js"></script>
 </body>
 </html>
