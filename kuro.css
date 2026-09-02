@@ -1613,6 +1613,39 @@ a {
   margin-top: 6px;
 }
 
+/* ── フッター上部キャラクター ───────── */
+.footer-characters {
+  padding: 24px 0 12px;
+  background: #fff;
+}
+
+.footer-characters-inner {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 110px));
+  justify-content: center;
+  gap: clamp(10px, 3vw, 32px);
+}
+
+.footer-characters img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+}
+
+@media (max-width: 640px) {
+  .footer-characters {
+    padding-top: 18px;
+  }
+
+  .footer-characters-inner {
+    gap: 6px;
+  }
+
+  .footer-characters img {
+    height: 104px;
+  }
+}
+
 /* ── フッター ─────────────────────── */
 footer {
   background: var(--green-900);
