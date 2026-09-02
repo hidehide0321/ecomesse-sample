@@ -546,6 +546,27 @@ a {
   gap: 24px;
 }
 
+.exhibitor-list-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.exhibitor-name-list {
+  margin-top: 20px;
+  padding: 28px 32px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.exhibitor-name-list p {
+  color: var(--ink-mute);
+  font-size: 15px;
+  line-height: 2.1;
+}
+
 .exp-card {
   appearance: none;
   width: 100%;

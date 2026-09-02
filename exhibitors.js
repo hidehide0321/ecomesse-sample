@@ -15,7 +15,18 @@
   const countLabel = document.getElementById("exhibitor-count");
   const grid = document.getElementById("exhibitor-grid");
   const closeButton = document.getElementById("exhibitor-close");
+  const listToggle = document.getElementById("exhibitor-list-toggle");
+  const nameList = document.getElementById("exhibitor-name-list");
+  const nameListContent = document.getElementById("exhibitor-name-list-content");
   const exhibitors = Array.isArray(window.ECOMESSE_EXHIBITORS) ? window.ECOMESSE_EXHIBITORS : [];
+
+  nameListContent.textContent = exhibitors.map(item => item.name).join(" ／ ");
+
+  listToggle.addEventListener("click", () => {
+    const willOpen = nameList.hidden;
+    nameList.hidden = !willOpen;
+    listToggle.setAttribute("aria-expanded", String(willOpen));
+  });
 
   function createGoal(goal, isMain) {
     const wrapper = document.createElement("span");
