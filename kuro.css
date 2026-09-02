@@ -714,9 +714,7 @@ a {
   width: 90px;
   height: 90px;
   border-radius: 4px;
-  background-image: url("images/sdgs_icons_reference_2026.png");
-  background-size: 636px 382px;
-  background-repeat: no-repeat;
+  object-fit: contain;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
 }
 
@@ -744,7 +742,6 @@ a {
 .exhibitor-goal:not(.is-main) .exhibitor-sdg-icon {
   width: 52px;
   height: 52px;
-  background-size: 367.47px 220.71px;
 }
 
 .exhibitor-goal:not(.is-main) .sdg-1,

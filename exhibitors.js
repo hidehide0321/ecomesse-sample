@@ -29,10 +29,10 @@
       wrapper.appendChild(label);
     }
 
-    const icon = document.createElement("span");
-    icon.className = "exhibitor-sdg-icon sdg-" + goal;
-    icon.setAttribute("role", "img");
-    icon.setAttribute("aria-label", "SDGs目標" + goal);
+    const icon = document.createElement("img");
+    icon.className = "exhibitor-sdg-icon";
+    icon.src = "images/sdg_icon_" + String(goal).padStart(2, "0") + "_ja.png";
+    icon.alt = "SDGs目標" + goal;
     wrapper.appendChild(icon);
     return wrapper;
   }
