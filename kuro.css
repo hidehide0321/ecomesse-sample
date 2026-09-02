@@ -552,6 +552,57 @@ a {
   margin-top: 28px;
 }
 
+/* ── SDGsマルシェ ── */
+.marche-card {
+  display: grid;
+  grid-template-columns: minmax(280px, 42%) minmax(0, 1fr);
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.marche-card > img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.marche-card-body {
+  display: flex;
+  align-items: center;
+  padding: clamp(28px, 5vw, 56px);
+}
+
+.marche-card-body p {
+  color: var(--green-900);
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2.2vw, 25px);
+  font-weight: 700;
+  line-height: 1.9;
+}
+
+@media (max-width: 640px) {
+  .marche-card {
+    grid-template-columns: 42% minmax(0, 1fr);
+  }
+
+  .marche-card > img {
+    height: 210px;
+  }
+
+  .marche-card-body {
+    padding: 20px 16px;
+  }
+
+  .marche-card-body p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+
 .exhibitor-name-list {
   margin-top: 20px;
   padding: 28px 32px;
