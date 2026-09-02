@@ -191,7 +191,7 @@
 
         <div class="exp-grid">
           <button class="exp-card" type="button" data-category="つくる" aria-pressed="false" aria-controls="exhibitor-directory">
-            <img src="images/02_recycle_craft_family.png" alt="親子で牛乳パックや空き容器を使って工作を楽しむ様子">
+            <img src="images/01_make_pet_bottle_event.png" alt="ペットボトルなどの身近な素材を使った工作体験">
             <div class="exp-body">
               <h3>つくる <em>MAKE</em></h3>
               <p>ペットボトルなど、身近な素材から。ものを大切にする感覚と創造力が育ちます。</p>
@@ -199,7 +199,7 @@
           </button>
 
           <button class="exp-card" type="button" data-category="遊ぶ" aria-pressed="false" aria-controls="exhibitor-directory">
-            <img src="images/03_family_recycling_learning.png" alt="親子でリサイクルについてゲームで学ぶ様子">
+            <img src="images/02_play_card_quiz_event.png" alt="カードやクイズを通じて楽しく学ぶ体験">
             <div class="exp-body">
               <h3>遊ぶ <em>PLAY</em></h3>
               <p>ゲームやクイズで、身の回りのサステナブルを発見。遊んでいるうちに自然と身につきます。</p>
@@ -207,7 +207,7 @@
           </button>
 
           <button class="exp-card" type="button" data-category="ふれあう" aria-pressed="false" aria-controls="exhibitor-directory">
-            <img src="images/04_farmers_market.png" alt="地域の野菜が並ぶファーマーズマーケットの様子">
+            <img src="images/04_touch_exhibit_panel.png" alt="展示パネルを見て情報や環境にふれる体験">
             <div class="exp-body">
               <h3>ふれる <em>TASTE</em></h3>
               <p>情報にふれ、環境にふれ、これからの暮らしを考えます。</p>
@@ -215,19 +215,12 @@
           </button>
 
           <button class="exp-card" type="button" data-category="見つける" aria-pressed="false" aria-controls="exhibitor-directory">
-            <img src="images/05_boy_insect_observation.png" alt="子どもが虫めがねで生き物を観察する様子">
+            <img src="images/05_eco_machine_surprise.png" alt="エコな仕組みや機械を見つける体験">
             <div class="exp-body">
               <h3>見つける <em>FIND</em></h3>
               <p>会場に並ぶブースをめぐって、未来の暮らしのヒント探し。おどろきが待っています。</p>
             </div>
           </button>
-        </div>
-
-        <div class="exhibitor-list-action">
-          <button class="btn btn-sub" id="exhibitor-list-toggle" type="button" aria-expanded="false" aria-controls="exhibitor-name-list">出展者一覧</button>
-        </div>
-        <div class="exhibitor-name-list" id="exhibitor-name-list" hidden>
-          <p id="exhibitor-name-list-content"></p>
         </div>
 
         <div class="exhibitor-directory" id="exhibitor-directory" hidden>
@@ -252,7 +245,7 @@
           <h2>SDGsマルシェ</h2>
         </div>
         <article class="marche-card">
-          <img src="images/04_farmers_market.png" alt="千葉県の農産物やエコ商品が並ぶSDGsマルシェ">
+          <img src="images/04_sdgs_marche_indoor-v2.png" alt="屋内会場に千葉県の農産物やエコ商品が並ぶSDGsマルシェ">
           <div class="marche-card-body">
             <p>千葉県の情報、農産物、エコ商品の販売を行います。</p>
           </div>
@@ -436,6 +429,18 @@
     <section class="section section-soft supporters-section" aria-labelledby="supporters-title">
       <div class="wrap">
         <div class="supporters-container">
+          <div class="supporters-exhibitors">
+            <h2>出展企業・団体</h2>
+            <div class="exhibitor-list-action">
+              <button class="btn btn-sub" id="exhibitor-list-toggle" type="button" aria-expanded="false" aria-controls="exhibitor-name-list">一覧を確認する</button>
+            </div>
+            <div class="exhibitor-name-list" id="exhibitor-name-list" hidden>
+              <p id="exhibitor-name-list-content"></p>
+              <div class="exhibitor-name-list-close">
+                <button class="btn btn-sub" id="exhibitor-name-list-close" type="button">✕ 閉じる</button>
+              </div>
+            </div>
+          </div>
           <h2 id="supporters-title">協賛・後援</h2>
           <div class="supporters-group">
             <h3>協賛</h3>

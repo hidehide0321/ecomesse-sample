@@ -622,6 +622,12 @@ a {
   line-height: 2.1;
 }
 
+.exhibitor-name-list-close {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+
 .exp-card {
   appearance: none;
   width: 100%;
@@ -1487,6 +1493,28 @@ a {
   font-size: clamp(24px, 3vw, 32px);
 }
 
+.supporters-exhibitors {
+  margin-bottom: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+
+.supporters-exhibitors h2 {
+  font-size: clamp(22px, 2.7vw, 28px);
+}
+
+.supporters-exhibitors .exhibitor-list-action {
+  margin-top: 20px;
+}
+
+.supporters-exhibitors .exhibitor-name-list {
+  margin-top: 24px;
+  background: var(--green-100);
+  box-shadow: none;
+  text-align: left;
+}
+
 .supporters-logo-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -1525,6 +1553,15 @@ a {
 @media (max-width: 640px) {
   .supporters-container {
     padding: 30px 22px;
+  }
+
+  .supporters-exhibitors {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+  }
+
+  .supporters-exhibitors .exhibitor-name-list {
+    padding: 22px 18px;
   }
 
   .supporters-logo-grid {

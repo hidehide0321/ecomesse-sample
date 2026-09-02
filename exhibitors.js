@@ -18,6 +18,7 @@
   const listToggle = document.getElementById("exhibitor-list-toggle");
   const nameList = document.getElementById("exhibitor-name-list");
   const nameListContent = document.getElementById("exhibitor-name-list-content");
+  const nameListClose = document.getElementById("exhibitor-name-list-close");
   const exhibitors = Array.isArray(window.ECOMESSE_EXHIBITORS) ? window.ECOMESSE_EXHIBITORS : [];
 
   nameListContent.textContent = exhibitors.map(item => item.name).join(" ／ ");
@@ -26,6 +27,12 @@
     const willOpen = nameList.hidden;
     nameList.hidden = !willOpen;
     listToggle.setAttribute("aria-expanded", String(willOpen));
+  });
+
+  nameListClose.addEventListener("click", () => {
+    nameList.hidden = true;
+    listToggle.setAttribute("aria-expanded", "false");
+    listToggle.focus();
   });
 
   function createGoal(goal, isMain) {
