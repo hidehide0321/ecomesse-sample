@@ -553,6 +553,10 @@ a {
 }
 
 /* ── SDGsマルシェ ── */
+.marche-section {
+  padding-top: 20px;
+}
+
 .marche-card {
   display: grid;
   grid-template-columns: minmax(280px, 42%) minmax(0, 1fr);
