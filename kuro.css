@@ -1458,10 +1458,23 @@ a {
 }
 
 .contact-cta-btn {
-  margin-top: 26px;
   min-width: 260px;
   padding: 16px 40px;
   font-size: 16px;
+}
+
+.contact-cta-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.contact-volunteer-btn {
+  background: var(--white);
+  color: var(--green-700);
+  border-color: var(--green-700);
 }
 
 .contact-cta-alt {
