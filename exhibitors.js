@@ -20,6 +20,12 @@
   const nameListContent = document.getElementById("exhibitor-name-list-content");
   const nameListClose = document.getElementById("exhibitor-name-list-close");
   const exhibitors = Array.isArray(window.ECOMESSE_EXHIBITORS) ? window.ECOMESSE_EXHIBITORS : [];
+  const exhibitorUrls = window.ECOMESSE_EXHIBITOR_URLS || {};
+  const marcheExhibitors = Array.isArray(window.ECOMESSE_MARCHE_EXHIBITORS) ? window.ECOMESSE_MARCHE_EXHIBITORS : [];
+  const marcheToggle = document.getElementById("marche-toggle");
+  const marcheDirectory = document.getElementById("marche-directory");
+  const marcheGrid = document.getElementById("marche-exhibitor-grid");
+  const marcheClose = document.getElementById("marche-close");
 
   nameListContent.textContent = exhibitors.map(item => item.name).join(" ／ ");
 
@@ -62,7 +68,17 @@
     if (lightGoals.has(exhibitor.main)) card.classList.add("is-light");
 
     const name = document.createElement("h4");
-    name.textContent = exhibitor.name;
+    const url = exhibitorUrls[exhibitor.name];
+    if (url) {
+      const link = document.createElement("a");
+      link.href = url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = exhibitor.name;
+      name.appendChild(link);
+    } else {
+      name.textContent = exhibitor.name;
+    }
     card.appendChild(name);
 
     const description = document.createElement("p");
@@ -120,5 +136,45 @@
       behavior: reduceMotion ? "auto" : "smooth",
       block: "center"
     });
+  });
+
+  function createMarcheCard(exhibitor) {
+    const card = document.createElement("article");
+    card.className = "marche-exhibitor-item";
+    const heading = document.createElement("h4");
+    if (exhibitor.url) {
+      const link = document.createElement("a");
+      link.href = exhibitor.url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = exhibitor.name;
+      heading.appendChild(link);
+    } else {
+      heading.textContent = exhibitor.name;
+    }
+    const description = document.createElement("p");
+    description.textContent = exhibitor.description;
+    card.append(heading, description);
+    return card;
+  }
+
+  marcheToggle.addEventListener("click", () => {
+    const willOpen = marcheDirectory.hidden;
+    marcheDirectory.hidden = !willOpen;
+    marcheToggle.setAttribute("aria-pressed", String(willOpen));
+    if (willOpen) {
+      marcheGrid.replaceChildren(...marcheExhibitors.map(createMarcheCard));
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      marcheDirectory.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    }
+  });
+
+  marcheClose.addEventListener("click", () => {
+    marcheDirectory.hidden = true;
+    marcheGrid.replaceChildren();
+    marcheToggle.setAttribute("aria-pressed", "false");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    marcheToggle.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+    marcheToggle.focus();
   });
 }());

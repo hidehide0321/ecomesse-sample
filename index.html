@@ -177,7 +177,7 @@
           </div>
         </div>
         <div class="history-link">
-          <a class="btn btn-sub" href="https://www.ecomesse.com/wp-content/uploads/2026/03/aa834049268a6180abbf748b218c8e20.pdf" target="_blank" rel="noopener">30年の歴史はこちら</a>
+          <a class="btn btn-sub" href="documents/ecomesse-30th-report-2025.pdf" target="_blank" rel="noopener">30年の歴史はこちら</a>
         </div>
       </div>
     </section>
@@ -246,12 +246,23 @@
           <span class="eyebrow">MARCHE</span>
           <h2>SDGsマルシェ</h2>
         </div>
-        <article class="marche-card">
+        <button class="marche-card" id="marche-toggle" type="button" aria-pressed="false" aria-controls="marche-directory">
           <img src="images/04_sdgs_marche_indoor-v2.png" alt="屋内会場に千葉県の農産物やエコ商品が並ぶSDGsマルシェ">
           <div class="marche-card-body">
             <p>千葉県の情報、農産物、エコ商品の販売を行います。</p>
           </div>
-        </article>
+        </button>
+        <div class="marche-directory" id="marche-directory" hidden>
+          <div class="exhibitor-directory-head">
+            <span class="eyebrow">MARCHE EXHIBITORS</span>
+            <h3>SDGsマルシェの出展者</h3>
+            <p>10団体の出展情報</p>
+          </div>
+          <div class="marche-exhibitor-grid" id="marche-exhibitor-grid" aria-live="polite"></div>
+          <div class="exhibitor-close-wrap">
+            <button class="btn btn-sub exhibitor-close" id="marche-close" type="button">閉じる</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -301,6 +312,16 @@
         <div class="section-head">
           <span class="eyebrow">FLYER</span>
           <h2>チラシ</h2>
+        </div>
+        <div class="flyer-grid">
+          <a class="flyer-page" href="documents/ecomesse-flyer-2026.pdf#page=1" target="_blank" rel="noopener">
+            <iframe src="documents/ecomesse-flyer-2026.pdf#page=1&view=FitH&toolbar=0" title="2026開催チラシ 表面" loading="lazy"></iframe>
+            <span>表面を大きく見る</span>
+          </a>
+          <a class="flyer-page" href="documents/ecomesse-flyer-2026.pdf#page=2" target="_blank" rel="noopener">
+            <iframe src="documents/ecomesse-flyer-2026.pdf#page=2&view=FitH&toolbar=0" title="2026開催チラシ 裏面" loading="lazy"></iframe>
+            <span>裏面を大きく見る</span>
+          </a>
         </div>
       </div>
     </section>
@@ -527,6 +548,8 @@
   </div>
 
   <script src="exhibitors-data.js"></script>
+  <script src="exhibitor-links.js"></script>
+  <script src="marche-data.js"></script>
   <script src="exhibitors.js"></script>
 </body>
 </html>

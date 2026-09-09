@@ -558,6 +558,9 @@ a {
 }
 
 .marche-card {
+  appearance: none;
+  width: 100%;
+  padding: 0;
   display: grid;
   grid-template-columns: minmax(280px, 42%) minmax(0, 1fr);
   align-items: stretch;
@@ -566,6 +569,26 @@ a {
   border-radius: var(--radius-lg);
   background: #fff;
   box-shadow: var(--shadow);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.marche-card:hover,
+.marche-card[aria-pressed="true"] {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
+}
+
+.marche-card[aria-pressed="true"] {
+  border-color: var(--sun);
+}
+
+.marche-card:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 4px;
 }
 
 .marche-card > img {
@@ -588,6 +611,45 @@ a {
   line-height: 1.9;
 }
 
+.marche-directory {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.marche-exhibitor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.marche-exhibitor-item {
+  min-width: 0;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff6e6;
+  box-shadow: var(--shadow);
+}
+
+.marche-exhibitor-item h4,
+.marche-exhibitor-item h4 a {
+  color: var(--green-900);
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+.marche-exhibitor-item h4 a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.marche-exhibitor-item p {
+  margin-top: 14px;
+  color: var(--ink-mute);
+  line-height: 1.9;
+}
+
 @media (max-width: 640px) {
   .marche-card {
     grid-template-columns: 42% minmax(0, 1fr);
@@ -604,6 +666,14 @@ a {
   .marche-card-body p {
     font-size: 15px;
     line-height: 1.8;
+  }
+
+  .marche-exhibitor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .marche-exhibitor-item {
+    padding: 22px;
   }
 }
 
@@ -626,6 +696,49 @@ a {
   display: flex;
   justify-content: center;
   margin-top: 22px;
+}
+
+.flyer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.flyer-page {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  color: var(--green-700);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.flyer-page iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.414;
+  border: 0;
+  pointer-events: none;
+}
+
+.flyer-page span {
+  display: block;
+  padding: 14px 16px;
+}
+
+.flyer-page:hover span {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .flyer-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .exp-card {
@@ -757,6 +870,12 @@ a {
   font-size: 21px;
   line-height: 1.5;
   color: #fff;
+}
+
+.exhibitor-item h4 a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
 
 .exhibitor-item.is-light h4 {
@@ -1472,9 +1591,9 @@ a {
 }
 
 .contact-volunteer-btn {
-  background: var(--white);
-  color: var(--green-700);
+  background: #fff;
   border-color: var(--green-700);
+  color: var(--green-700);
 }
 
 .contact-cta-alt {
