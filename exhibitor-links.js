@@ -52,7 +52,6 @@ window.ECOMESSE_EXHIBITOR_URLS = {
   "千葉県農林水産部 環境農業推進課みどり・耕畜連携推進室": "https://stg3.pbl.pref.chiba.lg.jp/annou/index.html",
   "第46回全国豊かな海づくり大会千葉県実行委員会（千葉県水産課）": "https://www.pref.chiba.lg.jp/cate/ssk/nourinsuisan/suisan/umidukuri/",
   "千葉県ブルーカーボン推進協議会（千葉県漁業資源課）": "https://www.pref.chiba.lg.jp/gyoshigen/moba/bluecarbon.html",
-  "千葉県県土整備部下水道課【（公財）千葉県下水道公社と共同出展】": "https://www.pref.chiba.lg.jp/gesui/",
   "千葉県企業局管理部 業務振興課": "https://www.pref.chiba.lg.jp/kigyou/main/top.html",
   "千葉市脱炭素先行地域推進コンソーシアム": "https://www.city.chiba.jp/decarbonizationleadingarea/consortium/index.html",
   "千葉市環境局": "https://www.city.chiba.jp/kankyo/kankyohozen/somu/index.html",

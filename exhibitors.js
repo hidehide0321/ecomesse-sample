@@ -86,6 +86,20 @@
     description.textContent = exhibitor.description;
     card.appendChild(description);
 
+    if (Array.isArray(exhibitor.detailLinks) && exhibitor.detailLinks.length) {
+      const detailLinks = document.createElement("div");
+      detailLinks.className = "exhibitor-detail-links";
+      exhibitor.detailLinks.forEach(item => {
+        const link = document.createElement("a");
+        link.href = item.url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = item.label;
+        detailLinks.appendChild(link);
+      });
+      card.appendChild(detailLinks);
+    }
+
     const goals = document.createElement("div");
     goals.className = "exhibitor-goals";
     goals.setAttribute("aria-label", "関連するSDGs目標");
@@ -155,6 +169,15 @@
     const description = document.createElement("p");
     description.textContent = exhibitor.description;
     card.append(heading, description);
+    if (exhibitor.detailUrl) {
+      const detailLink = document.createElement("a");
+      detailLink.className = "marche-detail-link";
+      detailLink.href = exhibitor.detailUrl;
+      detailLink.target = "_blank";
+      detailLink.rel = "noopener noreferrer";
+      detailLink.textContent = exhibitor.detailLabel || "ホームページを見る";
+      card.appendChild(detailLink);
+    }
     return card;
   }
 

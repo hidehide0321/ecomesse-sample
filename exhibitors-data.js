@@ -352,7 +352,7 @@ window.ECOMESSE_EXHIBITORS = [
   {
     "name": "ニッセイサステナプロジェクト「にっせーのせ！」×学生 共創プロジェクト",
     "category": "見つける",
-    "description": "【見て学べる】生活者の皆さまから集めた日常のサステナビリティに関する写真やひとことをデジタルギャラリーとして展示します。",
+    "description": "誰もが、ずっと安心して暮らせる社会へ。学生が集めた「日常のサステナビリティ」に関する写真をギャラリー形式で展示します。何気ない思いやりや環境への配慮など、一人ひとりの日常の行動が私たちの未来につながっています。写真を通じて、私たちの未来について一緒に考えてみませんか。",
     "main": 11,
     "other": [
       17
@@ -661,7 +661,11 @@ window.ECOMESSE_EXHIBITORS = [
       13,
       14
     ],
-    "decokatsu": false
+    "decokatsu": false,
+    "detailLinks": [
+      { "label": "下水道課", "url": "https://www.pref.chiba.lg.jp/gesui/" },
+      { "label": "千葉県下水道公社", "url": "https://www.chiba-gesui.or.jp/" }
+    ]
   },
   {
     "name": "千葉県企業局管理部 業務振興課",
