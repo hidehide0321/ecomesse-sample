@@ -177,7 +177,7 @@
           </div>
         </div>
         <div class="history-link">
-          <a class="btn btn-sub" href="documents/ecomesse-30th-report-2025.pdf" target="_blank" rel="noopener">30年の歴史はこちら</a>
+          <a class="btn btn-sub" href="documents/ecomesse-30th-report-2025.pdf" data-preview="pdf" data-preview-title="2025エコメッセちば報告書 30年のあゆみ">30年の歴史はこちら</a>
         </div>
       </div>
     </section>
@@ -316,11 +316,11 @@
         <div class="flyer-grid">
           <article class="flyer-page">
             <img src="images/fiyer-main.png" alt="2026開催チラシ メイン" loading="lazy">
-            <a class="btn btn-sub flyer-zoom" href="images/fiyer-main.png" target="_blank" rel="noopener">拡大する</a>
+            <a class="btn btn-sub flyer-zoom" href="images/fiyer-main.png" data-preview="image" data-preview-title="2026開催チラシ メイン">拡大する</a>
           </article>
           <article class="flyer-page">
             <img src="images/furaiyaer-sub.png" alt="2026開催チラシ サブ" loading="lazy">
-            <a class="btn btn-sub flyer-zoom" href="images/furaiyaer-sub.png" target="_blank" rel="noopener">拡大する</a>
+            <a class="btn btn-sub flyer-zoom" href="images/furaiyaer-sub.png" data-preview="image" data-preview-title="2026開催チラシ サブ">拡大する</a>
           </article>
         </div>
       </div>
@@ -401,7 +401,7 @@
             </div>
           </div>
           <div class="map">
-            <iframe src="https://www.google.com/maps?q=%E5%B9%95%E5%BC%B5%E3%83%A1%E3%83%83%E3%82%BB%E5%9B%BD%E9%9A%9B%E4%BC%9A%E8%AD%B0%E5%A0%B4&output=embed" title="幕張メッセ国際会議場のGoogleマップ" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps?q=35.6469042,140.0366009&z=18&output=embed" title="幕張メッセ国際会議場のGoogleマップ" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -501,6 +501,17 @@
 
   </main>
 
+  <dialog class="preview-dialog" id="preview-dialog" aria-labelledby="preview-title">
+    <div class="preview-dialog-head">
+      <h2 id="preview-title"></h2>
+      <button class="btn btn-sub preview-dialog-close" id="preview-close" type="button" aria-label="プレビューを閉じる">× 閉じる</button>
+    </div>
+    <div class="preview-dialog-body">
+      <iframe id="preview-frame" title="資料プレビュー" hidden></iframe>
+      <img id="preview-image" alt="" hidden>
+    </div>
+  </dialog>
+
   <div class="footer-characters" aria-label="エコメッセちば応援キャラクター">
     <div class="wrap footer-characters-inner">
       <img src="images/SDGsチーバくん.png" alt="SDGsチーバくん">
@@ -561,5 +572,6 @@
   <script src="marche-data.js"></script>
   <script src="online-data.js"></script>
   <script src="exhibitors.js"></script>
+  <script src="preview.js"></script>
 </body>
 </html>
