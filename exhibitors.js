@@ -26,8 +26,18 @@
   const marcheDirectory = document.getElementById("marche-directory");
   const marcheGrid = document.getElementById("marche-exhibitor-grid");
   const marcheClose = document.getElementById("marche-close");
+  const onlineExhibitors = Array.isArray(window.ECOMESSE_ONLINE_EXHIBITORS) ? window.ECOMESSE_ONLINE_EXHIBITORS : [];
+  const onlineToggle = document.getElementById("online-toggle");
+  const onlineDirectory = document.getElementById("online-directory");
+  const onlineGrid = document.getElementById("online-exhibitor-grid");
+  const onlineClose = document.getElementById("online-close");
 
-  nameListContent.textContent = exhibitors.map(item => item.name).join(" ／ ");
+  const allExhibitorNames = [
+    ...exhibitors,
+    ...marcheExhibitors,
+    ...onlineExhibitors
+  ].map(item => item.name);
+  nameListContent.textContent = [...new Set(allExhibitorNames)].join(" ／ ");
 
   listToggle.addEventListener("click", () => {
     const willOpen = nameList.hidden;
@@ -55,7 +65,7 @@
 
     const icon = document.createElement("img");
     icon.className = "exhibitor-sdg-icon";
-    icon.src = "images/sdg_icon_" + String(goal).padStart(2, "0") + "_ja.png";
+    icon.src = "../images/sdg_icon_" + String(goal).padStart(2, "0") + "_ja.png";
     icon.alt = "SDGs目標" + goal;
     wrapper.appendChild(icon);
     return wrapper;
@@ -113,7 +123,7 @@
       const deco = document.createElement("div");
       deco.className = "exhibitor-decokatsu";
       const image = document.createElement("img");
-      image.src = "images/decokatsu_logo_2026.png";
+      image.src = "../images/decokatsu_logo_2026.png";
       image.alt = "デコ活";
       const text = document.createElement("span");
       text.textContent = "デコ活対象";
@@ -199,5 +209,25 @@
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     marcheToggle.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
     marcheToggle.focus();
+  });
+
+  onlineToggle.addEventListener("click", () => {
+    const willOpen = onlineDirectory.hidden;
+    onlineDirectory.hidden = !willOpen;
+    onlineToggle.setAttribute("aria-pressed", String(willOpen));
+    if (willOpen) {
+      onlineGrid.replaceChildren(...onlineExhibitors.map(createMarcheCard));
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      onlineDirectory.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    }
+  });
+
+  onlineClose.addEventListener("click", () => {
+    onlineDirectory.hidden = true;
+    onlineGrid.replaceChildren();
+    onlineToggle.setAttribute("aria-pressed", "false");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    onlineToggle.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+    onlineToggle.focus();
   });
 }());

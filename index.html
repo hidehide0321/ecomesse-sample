@@ -314,27 +314,44 @@
           <h2>チラシ</h2>
         </div>
         <div class="flyer-grid">
-          <a class="flyer-page" href="documents/ecomesse-flyer-2026.pdf#page=2" target="_blank" rel="noopener">
-            <iframe src="documents/ecomesse-flyer-2026.pdf#page=2&view=FitH&toolbar=0" title="2026開催チラシ 裏面" loading="lazy"></iframe>
-            <span>裏面を大きく見る</span>
-          </a>
+          <article class="flyer-page">
+            <img src="images/fiyer-main.png" alt="2026開催チラシ メイン" loading="lazy">
+            <a class="btn btn-sub flyer-zoom" href="images/fiyer-main.png" target="_blank" rel="noopener">拡大する</a>
+          </article>
+          <article class="flyer-page">
+            <img src="images/furaiyaer-sub.png" alt="2026開催チラシ サブ" loading="lazy">
+            <a class="btn btn-sub flyer-zoom" href="images/furaiyaer-sub.png" target="_blank" rel="noopener">拡大する</a>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- ===== オンライン ===== -->
     <section class="section" id="online">
-      <div class="wrap online-grid">
-        <img src="images/07_online_event_family.png" alt="家族でタブレットを見ながらオンライン企画を楽しむ様子">
-        <div>
-          <span class="eyebrow">ONLINE</span>
-          <h2 style="font-size:clamp(23px,3vw,30px); margin-top:12px;">会場に行けなくても、参加できます</h2>
-          <ul class="tick">
-            <li>動画とインタビューで、団体の活動と想いを紹介</li>
-            <li>好きな時間に、好きなだけ。おうちのペースで</li>
-            <li>遠方の方、小さなお子さん連れの方にも</li>
-          </ul>
-          <a class="btn btn-sun" href="#coming">公開予定をチェック</a>
+      <div class="wrap">
+        <button class="online-grid online-card" id="online-toggle" type="button" aria-pressed="false" aria-controls="online-directory">
+          <img src="images/07_online_event_family.png" alt="家族でタブレットを見ながらオンライン企画を楽しむ様子">
+          <div>
+            <span class="eyebrow">ONLINE</span>
+            <h2>会場に行けなくても、参加できます</h2>
+            <ul class="tick">
+              <li>動画とインタビューで、団体の活動と想いを紹介</li>
+              <li>好きな時間に、好きなだけ。おうちのペースで</li>
+              <li>遠方の方、小さなお子さん連れの方にも</li>
+            </ul>
+            <span class="btn btn-sun">オンライン出展団体を見る</span>
+          </div>
+        </button>
+        <div class="marche-directory" id="online-directory" hidden>
+          <div class="exhibitor-directory-head">
+            <span class="eyebrow">ONLINE EXHIBITORS</span>
+            <h3>オンライン出展団体</h3>
+            <p>7団体の活動情報</p>
+          </div>
+          <div class="marche-exhibitor-grid" id="online-exhibitor-grid" aria-live="polite"></div>
+          <div class="exhibitor-close-wrap">
+            <button class="btn btn-sub exhibitor-close" id="online-close" type="button">閉じる</button>
+          </div>
         </div>
       </div>
     </section>
@@ -346,13 +363,9 @@
           <span class="eyebrow">COMING SOON</span>
           <h2 style="font-size:clamp(22px,3vw,28px); margin-top:12px;">これから公開される情報</h2>
           <p style="color:var(--ink-mute); margin-top:12px; font-size:15px;">
-            今年の出展団体とレイアウトを、実行委員会で調整しています。
+            会場レイアウトを、実行委員会で調整しています。
           </p>
           <div class="coming-list">
-            <div class="coming-item">
-              <b>オンライン出展リスト</b>
-              <p>動画や資料で紹介する団体の一覧です。</p>
-            </div>
             <div class="coming-item">
               <b>会場マップ</b>
               <p>ベビーカー優先通路や授乳室の位置も記載します。</p>
@@ -546,6 +559,7 @@
   <script src="exhibitors-data.js"></script>
   <script src="exhibitor-links.js"></script>
   <script src="marche-data.js"></script>
+  <script src="online-data.js"></script>
   <script src="exhibitors.js"></script>
 </body>
 </html>
