@@ -179,6 +179,25 @@
     const description = document.createElement("p");
     description.textContent = exhibitor.description;
     card.append(heading, description);
+    if (exhibitor.detailLinks?.length) {
+      const detailLinks = document.createElement("div");
+      detailLinks.className = "marche-detail-links";
+      const instagramIcon = document.createElement("span");
+      instagramIcon.className = "marche-instagram-icon";
+      instagramIcon.setAttribute("aria-label", "Instagram");
+      instagramIcon.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>';
+      detailLinks.appendChild(instagramIcon);
+      exhibitor.detailLinks.forEach((detail) => {
+        const detailLink = document.createElement("a");
+        detailLink.className = "marche-detail-link";
+        detailLink.href = detail.url;
+        detailLink.target = "_blank";
+        detailLink.rel = "noopener noreferrer";
+        detailLink.textContent = detail.label;
+        detailLinks.appendChild(detailLink);
+      });
+      card.appendChild(detailLinks);
+    }
     if (exhibitor.detailUrl) {
       const detailLink = document.createElement("a");
       detailLink.className = "marche-detail-link";

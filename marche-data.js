@@ -8,5 +8,15 @@ window.ECOMESSE_MARCHE_EXHIBITORS = [
   { name: "clecle", description: "チーバくんがデザインされた30kg用の米袋を、おしゃれで味わいのあるエコバッグにアップサイクル！丈夫な素材を活かし、障がいのある方と一緒に一つひとつ丁寧に製作・販売します。", url: "https://www.instagram.com/clecle.motono?igsh=ZHRlMjIxbHlrdzhz" },
   { name: "スマートビーンズ株式会社", description: "鴨川産新米コシヒカリのつかみ取りを行います。省エネによるコストと環境負荷低減を推奨する弊社では千葉県が推奨する”千産千消”を応援しています。輸送距離の短縮によるCO２排出量低減と、流通経路を省く生産者直接買付けによる経済循環が農家と農地支援にもつながります。", url: "http://smartbeanz.wixsite.com/sho-ene" },
   { name: "浦安三番瀬を大切にする会", description: "浦安三番瀬のクリーンアップで採集した、海洋プラごみをアップサイクルして、アート作品や貝殻ペンダント作りの体験や販売をします。", url: "" },
-  { name: "インフルエンス", description: "千葉の魅力、企業の魅力を全域にデジタル配信！生活に必要な地域の情報をInstagramで配信しています。お役立ち情報がたくさんあります。ぜひ、ご登録ください。", url: "", detailLabel: "ふなたび", detailUrl: "https://www.instagram.com/funabashi._.funatabi?stkn=ZWg0b3FvYnd3c2pw" }
+  {
+    name: "インフルエンス",
+    description: "千葉の魅力、企業の魅力を全域にデジタル配信！生活に必要な地域の情報をInstagramで配信しています。お役立ち情報がたくさんあります。ぜひ、ご登録ください。",
+    url: "",
+    detailLinks: [
+      { label: "ふなたび | 船橋グルメ&スポット散歩", url: "https://www.instagram.com/funabashi._.funatabi?stkn=ZWg0b3FvYnd3c2pw" },
+      { label: "ちばデート", url: "https://www.instagram.com/chiba_dateplan?stkn=MWpoZmZndjhrdWdxbQ==" },
+      { label: "こんち | 千葉の情報No１ガイド", url: "https://www.instagram.com/konchi_odekake_?stkn=MTl3aWtsa3dzbmhjZQ==" },
+      { label: "ちばはる千葉 子連れお出かけ&旅行", url: "https://www.instagram.com/chibaharu_odekake?stkn=Nmw2bmZsdGhnMGNm" }
+    ]
+  }
 ];
