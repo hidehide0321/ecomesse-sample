@@ -1805,19 +1805,54 @@ a {
   text-align: left;
 }
 
-.supporters-logo-grid {
+.supporters-list {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 14px;
-  align-items: center;
+  gap: 8px;
   width: 100%;
-  margin-top: 14px;
 }
 
-.supporters-logo-grid img {
+.supporter-name,
+.supporter-logo {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink-mute);
+  font-size: 11px;
+  line-height: 1.45;
+  text-align: center;
+  text-decoration: none;
+}
+
+a.supporter-name {
+  color: var(--green-700);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.supporter-logo img {
   width: 100%;
-  height: 76px;
+  height: 38px;
   object-fit: contain;
+}
+
+a.supporter-name:hover,
+a.supporter-logo:hover {
+  border-color: var(--green-700);
+  background: var(--green-100);
+}
+
+a.supporter-name:focus-visible,
+a.supporter-logo:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 3px;
 }
 
 .supporters-group {
@@ -1854,9 +1889,14 @@ a {
     padding: 22px 18px;
   }
 
-  .supporters-logo-grid {
+  .supporters-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px 18px;
+    gap: 8px;
+  }
+
+  .supporter-name,
+  .supporter-logo {
+    min-height: 44px;
   }
 
   .supporters-group {
