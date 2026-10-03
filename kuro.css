@@ -2034,8 +2034,90 @@ a.supporter-logo:focus-visible {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
-  max-width: 820px;
+  max-width: 1120px;
   margin: 0 auto;
+}
+
+.online-exhibitor-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.online-exhibitor-media,
+.online-exhibitor-placeholder {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--green-100);
+}
+
+.online-exhibitor-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.online-exhibitor-media:hover img {
+  transform: scale(1.025);
+}
+
+.online-exhibitor-placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--green-800);
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.online-exhibitor-body {
+  padding: 24px;
+}
+
+.online-exhibitor-body h3,
+.online-exhibitor-body h3 a {
+  color: var(--green-900);
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.online-exhibitor-body h3 a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.online-exhibitor-body p {
+  margin-top: 14px;
+  color: var(--ink-mute);
+  line-height: 1.85;
+}
+
+.online-video-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 20px;
+  padding: 9px 18px;
+  border: 1px solid var(--green-700);
+  border-radius: 6px;
+  color: var(--green-800);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.online-video-link::before {
+  content: "▶";
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.online-video-link:hover {
+  background: var(--green-700);
+  color: #fff;
 }
 
 .coming-mini {

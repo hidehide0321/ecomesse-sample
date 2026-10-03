@@ -66,7 +66,7 @@
             <div class="date-card">
               <p class="label">💻 公開スタート</p>
               <p class="day">10月10日(土) 10:00〜</p>
-              <p class="place">期間中はいつでも視聴できます</p>
+              <p class="place">次回開催まで視聴できます。</p>
             </div>
           </div>
 
@@ -92,23 +92,7 @@
           <p>参加団体が制作した動画やスライドで、それぞれの活動や取り組みをご紹介します。</p>
         </div>
 
-        <p class="sample-note">※ 下のカードはサンプル表示です。公開時に実際の団体・内容に差し替わります。</p>
-
-        <div class="online-grid-cards">
-          <article class="exp-card">
-            <img src="../images/sample_online_exhibition_thumb.png" alt="親子でリサイクルを学ぶ様子">
-            <div class="exp-body">
-              <h3>親子で学ぶリサイクルの工夫 <em>動画</em></h3>
-              <p>身近な暮らしのなかでできるリサイクルの工夫や、地域での取り組みを動画で紹介します。</p>
-            </div>
-          </article>
-
-          <div class="coming coming-mini">
-            <b>公開コンテンツは準備中です</b>
-            <p>動画・団体名・紹介文をカード形式で掲載できるよう準備しています。</p>
-            <p class="when">📅 2026年10月10日 公開予定</p>
-          </div>
-        </div>
+        <div class="online-grid-cards" id="online-exhibitor-cards"></div>
       </div>
     </section>
 
@@ -120,8 +104,6 @@
           <h2>団体インタビュー</h2>
           <p>地域や環境のために活動する団体に、活動を始めた理由や目指している未来について伺います。</p>
         </div>
-
-        <p class="sample-note">※ 下のカードはサンプル表示です。公開時に実際の団体・内容に差し替わります。</p>
 
         <div class="online-grid-cards">
           <article class="exp-card">
@@ -199,6 +181,75 @@
     <a class="btn btn-sub" href="#exhibition">出展を見る</a>
     <a class="btn btn-main" href="../contact.html">相談する</a>
   </div>
+
+  <script src="../online-data.js"></script>
+  <script>
+    (() => {
+      const container = document.getElementById("online-exhibitor-cards");
+      const exhibitors = window.ECOMESSE_ONLINE_EXHIBITORS || [];
+
+      exhibitors.forEach((exhibitor) => {
+        const card = document.createElement("article");
+        card.className = "online-exhibitor-card";
+
+        if (exhibitor.image) {
+          const media = exhibitor.videoUrl ? document.createElement("a") : document.createElement("div");
+          media.className = "online-exhibitor-media";
+          if (exhibitor.videoUrl) {
+            media.href = exhibitor.videoUrl;
+            media.target = "_blank";
+            media.rel = "noopener";
+            media.setAttribute("aria-label", `${exhibitor.name}の動画を見る`);
+          }
+          const image = document.createElement("img");
+          image.src = `../images/${exhibitor.image}`;
+          image.alt = `${exhibitor.name}の動画サムネイル`;
+          image.loading = "lazy";
+          media.appendChild(image);
+          card.appendChild(media);
+        } else {
+          const placeholder = document.createElement("div");
+          placeholder.className = "online-exhibitor-placeholder";
+          placeholder.textContent = "コンテンツ準備中";
+          card.appendChild(placeholder);
+        }
+
+        const body = document.createElement("div");
+        body.className = "online-exhibitor-body";
+        const heading = document.createElement("h3");
+        if (exhibitor.websiteUrl) {
+          const website = document.createElement("a");
+          website.href = exhibitor.websiteUrl;
+          website.target = "_blank";
+          website.rel = "noopener";
+          website.textContent = exhibitor.name;
+          heading.appendChild(website);
+        } else {
+          heading.textContent = exhibitor.name;
+        }
+        body.appendChild(heading);
+
+        if (exhibitor.description) {
+          const description = document.createElement("p");
+          description.textContent = exhibitor.description;
+          body.appendChild(description);
+        }
+
+        if (exhibitor.videoUrl) {
+          const video = document.createElement("a");
+          video.className = "online-video-link";
+          video.href = exhibitor.videoUrl;
+          video.target = "_blank";
+          video.rel = "noopener";
+          video.textContent = "動画を見る";
+          body.appendChild(video);
+        }
+
+        card.appendChild(body);
+        container.appendChild(card);
+      });
+    })();
+  </script>
 
 </body>
 </html>
