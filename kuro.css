@@ -1265,7 +1265,6 @@ a {
 }
 
 .online-card {
-  appearance: none;
   width: 100%;
   padding: 0;
   border: 1px solid transparent;
@@ -1274,28 +1273,23 @@ a {
   color: inherit;
   font: inherit;
   text-align: left;
-  cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.online-card:hover,
-.online-card[aria-pressed="true"] {
+.online-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lift);
-}
-
-.online-card[aria-pressed="true"] {
-  border-color: var(--sun);
-}
-
-.online-card:focus-visible {
-  outline: 3px solid var(--sun);
-  outline-offset: 4px;
 }
 
 .online-card h2 {
   margin-top: 12px;
   font-size: clamp(23px, 3vw, 30px);
+}
+
+.online-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .online-grid img {

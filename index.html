@@ -329,7 +329,7 @@
     <!-- ===== オンライン ===== -->
     <section class="section" id="online">
       <div class="wrap">
-        <button class="online-grid online-card" id="online-toggle" type="button" aria-pressed="false" aria-controls="online-directory">
+        <div class="online-grid online-card">
           <img src="images/07_online_event_family.png" alt="家族でタブレットを見ながらオンライン企画を楽しむ様子">
           <div>
             <span class="eyebrow">ONLINE</span>
@@ -339,9 +339,12 @@
               <li>好きな時間に、好きなだけ。おうちのペースで</li>
               <li>遠方の方、小さなお子さん連れの方にも</li>
             </ul>
-            <span class="btn btn-sun">オンライン出展団体を見る</span>
+            <div class="online-actions">
+              <button class="btn btn-sun" id="online-toggle" type="button" aria-pressed="false" aria-controls="online-directory">オンライン出展団体を見る</button>
+              <a class="btn btn-sub" href="https://ecomesse.com/online/">オンライン出展を見る</a>
+            </div>
           </div>
-        </button>
+        </div>
         <div class="marche-directory" id="online-directory" hidden>
           <div class="exhibitor-directory-head">
             <span class="eyebrow">ONLINE EXHIBITORS</span>
@@ -352,26 +355,6 @@
           <div class="exhibitor-close-wrap">
             <button class="btn btn-sub exhibitor-close" id="online-close" type="button">閉じる</button>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== これから公開 ===== -->
-    <section class="section section-soft" id="coming">
-      <div class="wrap">
-        <div class="coming">
-          <span class="eyebrow">COMING SOON</span>
-          <h2 style="font-size:clamp(22px,3vw,28px); margin-top:12px;">これから公開される情報</h2>
-          <p style="color:var(--ink-mute); margin-top:12px; font-size:15px;">
-            会場レイアウトを、実行委員会で調整しています。
-          </p>
-          <div class="coming-list">
-            <div class="coming-item">
-              <b>会場マップ</b>
-              <p>ベビーカー優先通路や授乳室の位置も記載します。</p>
-            </div>
-          </div>
-          <p class="when">📅 2026年9月上旬 公開予定</p>
         </div>
       </div>
     </section>
